@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import TimeSeriesSplit, cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
@@ -18,7 +17,7 @@ class ModelTrainer:
 
     def cross_validate(self):
         tscv = TimeSeriesSplit(n_splits=3)
-        cv_results = cross_val_score(self.model_pipeline, self.X_train, self.y_train, cv=tscv, scoring='r2')
+        cv_results = cross_val_score(self.model_pipeline, self.X_train, self.y_train, cv=tscv, n_jobs=-1, scoring="r2")
 
         return cv_results
 

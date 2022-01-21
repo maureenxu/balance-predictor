@@ -8,8 +8,8 @@ import configuration as config
 
 def get_args():
     args = argparse.ArgumentParser(
-        prog="data_splitor",
-        description="select the defined tier of data, split to train and test"
+        prog="model_validator",
+        description="validate model performance"
     )
     args.add_argument("--input-test-path", required=True, type=str)
     args.add_argument("--input-model-path", required=True, type=str)

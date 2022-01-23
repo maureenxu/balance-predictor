@@ -1,13 +1,16 @@
 import datetime
 import json
+import os
+
 import pandas as pd
+from pathlib import Path
 
 import src.utils as ut
 import configuration as config
 
 
 def test_flatten_json():
-    with open('../data/0b24be9f1c36838864.json', encoding='utf8') as j:
+    with open('../data/input.json', encoding='utf8') as j:
         j_obj = json.load(j)
 
     result = []
@@ -48,7 +51,7 @@ def test_correct_credit_debt():
 
 
 def test_add_shift_and_diff():
-    with open('../data/0b24be9f1c36838864.json', encoding='utf8') as j:
+    with open('../data/input.json', encoding='utf8') as j:
         j_obj = json.load(j)
 
     flat_j_obj = []
@@ -75,3 +78,18 @@ def test_add_shift_and_diff():
 
     assert df_add_shift_diff is not None
     assert df_add_shift_diff.shape == (686, 43)
+
+
+def test_pickle_dump_output():
+    obj_test = {
+        "a": 1,
+        "b": 2
+    }
+    
+    output_path = "../data"
+    file_name = "test_pickle"
+    
+    ut.pickle_dump_output(output_path, file_name, obj_test)
+
+    output_file_path = Path(os.path.join(output_path, file_name))
+    assert output_file_path.is_file()

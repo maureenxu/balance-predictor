@@ -6,7 +6,6 @@ MODEL = RandomForestRegressor(n_jobs=-1)
 PARAMS = {
         'n_estimators': 50,
         'max_depth': 3,
-        'min_impurity_decrease': 0
 }
 
 TARGET = 'balanceAfterBooking_value_corr'

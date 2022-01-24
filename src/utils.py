@@ -1,8 +1,11 @@
 import datetime
+import pickle
+
 import sklearn.metrics as metrics
 from dateutil.parser import parse
 import numpy as np
 import pandas as pd
+import os
 
 
 def flatten_json(j_obj: dict) -> dict:
@@ -71,3 +74,14 @@ def regression_results(y_true, y_pred):
     }
     
     return metrics_dict
+
+
+def pickle_dump_output(output_path, file_name, obj):
+
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+
+    output_file_path = os.path.join(output_path, file_name)
+
+    with open(output_file_path, 'wb') as output_file:
+        pickle.dump(obj, output_file)

@@ -12,6 +12,7 @@ print(INPUT_DF.head())
 
 SPLIT_RATIO = 0.8
 
+
 def test_assign_tiers():
     data_spliter = DataSpliter(INPUT_DF, SPLIT_RATIO)
     result = data_spliter.df.shape

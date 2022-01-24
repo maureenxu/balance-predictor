@@ -23,10 +23,10 @@ class ModelValidator:
         return metrics_dict
 
     def plot_hist_vs_pred(self):
-        self.df.loc[:, config.TARGET + '_pred'] = self.y_pred
-        plt.plot(self.df[config.TARGET], 'b')
-        plt.plot(self.df[config.TARGET + '_pred'], 'r')
-        plt.legend(['History', 'Prediction'])
+        self.df.loc[:, config.TARGET + "_pred"] = self.y_pred
+        plt.plot(self.df[config.TARGET], "b")
+        plt.plot(self.df[config.TARGET + "_pred"], "r")
+        plt.legend(["History", "Prediction"])
         plt.show()
 
         return plt

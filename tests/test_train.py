@@ -7,11 +7,7 @@ from src.train import ModelTrainer
 
 INPUT_DF = joblib.load("../data/preprocessed_data.pkl")
 
-PARAMS = {
-        'n_estimators': 50,
-        'max_depth': 3,
-        'min_impurity_decrease': 0
-}
+PARAMS = {"n_estimators": 50, "max_depth": 3, "min_impurity_decrease": 0}
 
 
 def test_initialisation():
@@ -21,7 +17,7 @@ def test_initialisation():
     result_y = mt.y_train.shape
 
     expected_X = (686, 42)
-    expected_y = (686, )
+    expected_y = (686,)
 
     assert result_X == expected_X
     assert result_y == expected_y

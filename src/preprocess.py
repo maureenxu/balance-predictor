@@ -33,15 +33,25 @@ class DataPreprocessor:
         try:
             self.df.sort_values(by=config.DT_OBJ, ascending=True, inplace=True)
 
-            self.df['balanceAfterBooking_value'] = self.df['balanceAfterBooking_value'].astype(float)
+            self.df["balanceAfterBooking_value"] = self.df[
+                "balanceAfterBooking_value"
+            ].astype(float)
             self.df[config.TARGET] = self.df.apply(
-                lambda x: ut.correct_credit_debt(x['balanceAfterBooking_creditDebitIndicator'], x['balanceAfterBooking_value']),
-                axis=1)
+                lambda x: ut.correct_credit_debt(
+                    x["balanceAfterBooking_creditDebitIndicator"],
+                    x["balanceAfterBooking_value"],
+                ),
+                axis=1,
+            )
 
-            df_agg = self.df.groupby(pd.Grouper(key=config.DT_OBJ, freq=config.AGG_BY))[config.TARGET].sum()
+            df_agg = self.df.groupby(pd.Grouper(key=config.DT_OBJ, freq=config.AGG_BY))[
+                config.TARGET
+            ].sum()
             df_agg = pd.DataFrame(df_agg)
 
-            df_add_shift_diff = ut.add_shift_and_diff(df_agg, config.TARGET, config.SHIFT_NUM)
+            df_add_shift_diff = ut.add_shift_and_diff(
+                df_agg, config.TARGET, config.SHIFT_NUM
+            )
 
             print(f"Output data shape: {df_add_shift_diff.shape}", end="\n")
 

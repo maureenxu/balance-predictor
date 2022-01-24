@@ -9,10 +9,10 @@ class DataSpliter:
         self.split_ratio = split_ratio
 
     def _assign_tiers(self, df: pd.DataFrame) -> pd.DataFrame:
-        if config.TIER == 'passive':
+        if config.TIER == "passive":
             lower = df[config.TARGET].quantile(0.3)
             return df.loc[df[config.TARGET] >= lower, :].copy()
-        elif config.TIER == 'aggressive':
+        elif config.TIER == "aggressive":
             upper = df[config.TARGET].quantile(0.7)
             return df.loc[df[config.TARGET] < upper, :].copy()
         else:

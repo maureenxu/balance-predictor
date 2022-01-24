@@ -10,7 +10,7 @@ import configuration as config
 
 
 def test_flatten_json():
-    with open('../data/input.json', encoding='utf8') as j:
+    with open("../data/input.json", encoding="utf8") as j:
         j_obj = json.load(j)
 
     result = []
@@ -51,7 +51,7 @@ def test_correct_credit_debt():
 
 
 def test_add_shift_and_diff():
-    with open('../data/input.json', encoding='utf8') as j:
+    with open("../data/input.json", encoding="utf8") as j:
         j_obj = json.load(j)
 
     flat_j_obj = []
@@ -66,12 +66,18 @@ def test_add_shift_and_diff():
 
     df.sort_values(by=config.DT_OBJ, ascending=True, inplace=True)
 
-    df['balanceAfterBooking_value'] = df['balanceAfterBooking_value'].astype(float)
+    df["balanceAfterBooking_value"] = df["balanceAfterBooking_value"].astype(float)
     df[config.TARGET] = df.apply(
-        lambda x: ut.correct_credit_debt(x['balanceAfterBooking_creditDebitIndicator'], x['balanceAfterBooking_value']),
-        axis=1)
+        lambda x: ut.correct_credit_debt(
+            x["balanceAfterBooking_creditDebitIndicator"],
+            x["balanceAfterBooking_value"],
+        ),
+        axis=1,
+    )
 
-    df_agg = df.groupby(pd.Grouper(key=config.DT_OBJ, freq=config.AGG_BY))[config.TARGET].sum()
+    df_agg = df.groupby(pd.Grouper(key=config.DT_OBJ, freq=config.AGG_BY))[
+        config.TARGET
+    ].sum()
     df_agg = pd.DataFrame(df_agg)
 
     df_add_shift_diff = ut.add_shift_and_diff(df_agg, config.TARGET, config.SHIFT_NUM)
@@ -81,14 +87,11 @@ def test_add_shift_and_diff():
 
 
 def test_pickle_dump_output():
-    obj_test = {
-        "a": 1,
-        "b": 2
-    }
-    
+    obj_test = {"a": 1, "b": 2}
+
     output_path = "../data"
     file_name = "test_pickle"
-    
+
     ut.pickle_dump_output(output_path, file_name, obj_test)
 
     output_file_path = Path(os.path.join(output_path, file_name))

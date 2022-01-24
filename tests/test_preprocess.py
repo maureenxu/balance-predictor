@@ -4,7 +4,7 @@ import joblib
 from src.preprocess import DataPreprocessor
 
 
-with open('../data/0b24be9f1c36838864.json', encoding='utf8') as j:
+with open("../data/0b24be9f1c36838864.json", encoding="utf8") as j:
     INPUT_DATA = json.load(j)
 
 
@@ -31,5 +31,3 @@ def test_preprocess():
 
     assert df is not None
     assert result == expected
-
-

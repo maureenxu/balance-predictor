@@ -15,5 +15,12 @@ clean_setup: clean venv
 
 setup: venv
 
-test:
+lint:
+	. .venv/bin/activate && pylint src
+	. .venv/bin/activate && black -check src tests
+
+tests:
 	. .venv/bin/activate && pytest . 
+
+fix:
+	. .venv/bin/activate && black src tests

@@ -1,9 +1,6 @@
 name: Create release package
 
-on:
-  create:
-    tags:
-      - v*
+on: [ push, pull_request ]
 
 jobs:
   build:

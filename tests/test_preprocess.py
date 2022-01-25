@@ -1,15 +1,16 @@
 import json
-import joblib
+
+import pytest
 
 from src.preprocess import DataPreprocessor
 
+@pytest.fixture
+def input_data(test_config):
+    with open(f"{test_config.RESOURCES_FOLDER}/input.json", encoding="utf8") as j:
+        return json.load(j)
 
-with open("../data/0b24be9f1c36838864.json", encoding="utf8") as j:
-    INPUT_DATA = json.load(j)
-
-
-def test_initialisation():
-    data_preprocessor = DataPreprocessor(INPUT_DATA)
+def test_initialisation(test_config, input_data):
+    data_preprocessor = DataPreprocessor(test_config, input_data)
     result = data_preprocessor.df.shape
 
     expected = (7166, 8)
@@ -17,8 +18,8 @@ def test_initialisation():
     assert result == expected
 
 
-def test_preprocess():
-    data_preprocessor = DataPreprocessor(INPUT_DATA)
+def test_preprocess(test_config, input_data):
+    data_preprocessor = DataPreprocessor(test_config, input_data)
     df = data_preprocessor.preprocess()
 
     result = df.shape

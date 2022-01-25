@@ -1,24 +1,32 @@
+from typing import Optional
 import pandas as pd
 
-import configuration as config
+from src.configuration import Config
 
-
+# pylint: disable=too-few-public-methods
 class DataSpliter:
-    def __init__(self, df: pd.DataFrame, split_ratio: float):
-        self.df = self._assign_tiers(df)
+    def __init__(self, config: Config, df: pd.DataFrame, split_ratio: float):
         self.split_ratio = split_ratio
+        self.config = config
+        self.df = self._assign_tiers(df)
+
+        self.df_train: Optional[pd.DataFrame] = None
+        self.df_test: Optional[pd.DataFrame] = None
 
     def _assign_tiers(self, df: pd.DataFrame) -> pd.DataFrame:
-        if config.TIER == "passive":
-            lower = df[config.TARGET].quantile(0.3)
-            return df.loc[df[config.TARGET] >= lower, :].copy()
-        elif config.TIER == "aggressive":
-            upper = df[config.TARGET].quantile(0.7)
-            return df.loc[df[config.TARGET] < upper, :].copy()
-        else:
-            lower = df[config.TARGET].quantile(0.05)
-            upper = df[config.TARGET].quantile(0.95)
-            return df.loc[(df[config.TARGET] >= lower) & (df[config.TARGET] < upper), :]
+        if self.config.TIER == "passive":
+            lower = df[self.config.TARGET].quantile(0.3)
+            return df.loc[df[self.config.TARGET] >= lower, :].copy()
+
+        if self.config.TIER == "aggressive":
+            upper = df[self.config.TARGET].quantile(0.7)
+            return df.loc[df[self.config.TARGET] < upper, :].copy()
+
+        lower = df[self.config.TARGET].quantile(0.05)
+        upper = df[self.config.TARGET].quantile(0.95)
+        return df.loc[
+            (df[self.config.TARGET] >= lower) & (df[self.config.TARGET] < upper), :
+        ]
 
     def split(self):
         split_idx = int(self.df.shape[0] * self.split_ratio)

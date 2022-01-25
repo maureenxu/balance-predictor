@@ -6,11 +6,10 @@ import pandas as pd
 from pathlib import Path
 
 import src.utils as ut
-import configuration as config
 
 
-def test_flatten_json():
-    with open("../data/input.json", encoding="utf8") as j:
+def test_flatten_json(test_config):
+    with open(f"{test_config.RESOURCES_FOLDER}/input.json", encoding="utf8") as j:
         j_obj = json.load(j)
 
     result = []
@@ -50,8 +49,8 @@ def test_correct_credit_debt():
     assert result2 == expected2
 
 
-def test_add_shift_and_diff():
-    with open("../data/input.json", encoding="utf8") as j:
+def test_add_shift_and_diff(test_config):
+    with open(f"{test_config.RESOURCES_FOLDER}/input.json", encoding="utf8") as j:
         j_obj = json.load(j)
 
     flat_j_obj = []
@@ -62,12 +61,12 @@ def test_add_shift_and_diff():
 
     df = pd.DataFrame.from_records(flat_j_obj)
     df.reset_index(drop=True, inplace=True)
-    df[config.DT_OBJ] = df[config.BOOKING_DT].apply(ut.parse_dt_string)
+    df[test_config.DT_OBJ] = df[test_config.BOOKING_DT].apply(ut.parse_dt_string)
 
-    df.sort_values(by=config.DT_OBJ, ascending=True, inplace=True)
+    df.sort_values(by=test_config.DT_OBJ, ascending=True, inplace=True)
 
     df["balanceAfterBooking_value"] = df["balanceAfterBooking_value"].astype(float)
-    df[config.TARGET] = df.apply(
+    df[test_config.TARGET] = df.apply(
         lambda x: ut.correct_credit_debt(
             x["balanceAfterBooking_creditDebitIndicator"],
             x["balanceAfterBooking_value"],
@@ -75,21 +74,23 @@ def test_add_shift_and_diff():
         axis=1,
     )
 
-    df_agg = df.groupby(pd.Grouper(key=config.DT_OBJ, freq=config.AGG_BY))[
-        config.TARGET
+    df_agg = df.groupby(pd.Grouper(key=test_config.DT_OBJ, freq=test_config.AGG_BY))[
+        test_config.TARGET
     ].sum()
     df_agg = pd.DataFrame(df_agg)
 
-    df_add_shift_diff = ut.add_shift_and_diff(df_agg, config.TARGET, config.SHIFT_NUM)
+    df_add_shift_diff = ut.add_shift_and_diff(
+        df_agg, test_config.TARGET, test_config.SHIFT_NUM
+    )
 
     assert df_add_shift_diff is not None
     assert df_add_shift_diff.shape == (686, 43)
 
 
-def test_pickle_dump_output():
+def test_pickle_dump_output(test_config):
     obj_test = {"a": 1, "b": 2}
 
-    output_path = "../data"
+    output_path = f"{test_config.RESOURCES_FOLDER}/data"
     file_name = "test_pickle"
 
     ut.pickle_dump_output(output_path, file_name, obj_test)

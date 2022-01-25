@@ -1,17 +1,19 @@
 import joblib
 import pytest
-import pandas as pd
 
 from src.train import ModelTrainer
 
 
-INPUT_DF = joblib.load("../data/preprocessed_data.pkl")
+@pytest.fixture
+def input_df(test_config):
+    return joblib.load(f"{test_config.RESOURCES_FOLDER}/preprocessed_data.pkl")
+
 
 PARAMS = {"n_estimators": 50, "max_depth": 3, "min_impurity_decrease": 0}
 
 
-def test_initialisation():
-    mt = ModelTrainer(INPUT_DF, PARAMS)
+def test_initialisation(test_config, input_df):
+    mt = ModelTrainer(test_config, input_df, PARAMS)
 
     result_X = mt.X_train.shape
     result_y = mt.y_train.shape
@@ -23,15 +25,15 @@ def test_initialisation():
     assert result_y == expected_y
 
 
-def test_cross_validate():
-    mt = ModelTrainer(INPUT_DF, PARAMS)
+def test_cross_validate(test_config, input_df):
+    mt = ModelTrainer(test_config, input_df, PARAMS)
     cv_results = mt.cross_validate()
 
     assert cv_results is not None
 
 
-def test_train_model():
-    mt = ModelTrainer(INPUT_DF, PARAMS)
+def test_train_model(test_config, input_df):
+    mt = ModelTrainer(test_config, input_df, PARAMS)
     model_pipeline = mt.train_model()
 
     assert model_pipeline is not None

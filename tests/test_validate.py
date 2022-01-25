@@ -1,28 +1,33 @@
 from unittest.mock import patch
-import matplotlib.pyplot as plt
 import joblib
+
 import pytest
-import pandas as pd
 
 from src.validate import ModelValidator
 
 
-PATH = "../data/model.pkl"
-MODEL_PIPELINE = joblib.load(filename=PATH)
+@pytest.fixture
+def model_pipeline(test_config):
+    return joblib.load(filename=f"{test_config.RESOURCES_FOLDER}/model.pkl")
 
-INPUT_DF = joblib.load("../data/preprocessed_data.pkl")
+
+@pytest.fixture
+def input_df(test_config):
+    return joblib.load(f"{test_config.RESOURCES_FOLDER}/preprocessed_data.pkl")
 
 
-def test_get_metrics():
-    mv = ModelValidator(INPUT_DF, MODEL_PIPELINE)
+def test_get_metrics(test_config, input_df, model_pipeline):
+    mv = ModelValidator(test_config, input_df, model_pipeline)
     metrics = mv.get_metrics()
 
     assert metrics is not None
 
 
 @patch("matplotlib.pyplot.show")
-def test_plot(mock_show):
-    mv = ModelValidator(INPUT_DF, MODEL_PIPELINE)
+def test_plot(
+    mock_plot, test_config, input_df, model_pipeline
+):  # pylint: disable=unused-argument
+    mv = ModelValidator(test_config, input_df, model_pipeline)
     plt = mv.plot_hist_vs_pred()
 
-    plt.savefig(fname="../data/plot_hist_vs_pred.png")
+    plt.savefig(fname=f"{test_config.RESOURCES_FOLDER}/plot_hist_vs_pred.png")

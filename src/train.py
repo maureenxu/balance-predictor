@@ -3,19 +3,20 @@ from sklearn.model_selection import TimeSeriesSplit, cross_val_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 
-import configuration as config
+from src.configuration import Config
 
 
 class ModelTrainer:
-    def __init__(self, df_train: pd.DataFrame, params: dict):
+    def __init__(self, config: Config, df_train: pd.DataFrame, params: dict):
         self.df = df_train
-        self.model = config.MODEL.set_params(**params)
+        self.config = config
+        self.model = self.config.MODEL.set_params(**params)
         self.model_pipeline = Pipeline(
             steps=[("scaler", MinMaxScaler()), ("model", self.model)]
         )
 
-        self.X_train = self.df.drop([config.TARGET], axis=1)
-        self.y_train = self.df.loc[:, config.TARGET]
+        self.X_train = self.df.drop([self.config.TARGET], axis=1)
+        self.y_train = self.df.loc[:, self.config.TARGET]
 
     def cross_validate(self):
         tscv = TimeSeriesSplit(n_splits=3)

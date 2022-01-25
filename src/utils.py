@@ -1,21 +1,22 @@
+import os
 import datetime
 import pickle
 
-import sklearn.metrics as metrics
 from dateutil.parser import parse
+
+from sklearn import metrics
 import numpy as np
 import pandas as pd
-import os
 
 
 def flatten_json(j_obj: dict) -> dict:
     output = {}
 
     def flatten(x, name=""):
-        if type(x) is dict:
+        if isinstance(x, dict):
             for a in x:
                 flatten(x[a], name + a + "_")
-        elif type(x) is list:
+        elif isinstance(x, list):
             i = 0
             for a in x:
                 flatten(a, name + str(i) + "_")

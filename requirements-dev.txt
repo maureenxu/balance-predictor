@@ -1,3 +1,5 @@
-pytest==6.2.5
 pylint
 black
+
+pytest==6.2.5
+pytest-mock

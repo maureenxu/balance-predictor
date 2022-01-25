@@ -19,7 +19,7 @@ lint:
 	. .venv/bin/activate && pylint src
 	. .venv/bin/activate && black -check src tests
 
-tests:
+test:
 	. .venv/bin/activate && pytest . 
 
 fix:

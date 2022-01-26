@@ -20,7 +20,10 @@ lint:
 	. .venv/bin/activate && black -check src tests
 
 test:
-	. .venv/bin/activate && pytest . --ignore=tests_old
+	. .venv/bin/activate && pytest --ignore=tests_old .
+
+cov:
+	. .venv/bin/activate && pytest --cov=src --cov-report xml --ignore=tests_old .
 
 fix:
 	. .venv/bin/activate && black src tests

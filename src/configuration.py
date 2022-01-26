@@ -1,8 +1,7 @@
-import logging
 from sklearn.ensemble import RandomForestRegressor
 
 # pylint: disable=too-few-public-methods
-class Config:    
+class Config:
     # Define the tier for training. There are 3 options: 'passive', 'medium', 'aggressive'
     TIER = "medium"
 

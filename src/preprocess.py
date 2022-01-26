@@ -8,7 +8,7 @@ from src.configuration import Config
 class DataPreprocessor:
     def __init__(self, config: Config, data: list):
         self.config = config
-        
+
         # convert json object to dataframe
         self.data = data
         self.df = self._convert_json_to_df()

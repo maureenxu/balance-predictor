@@ -4,10 +4,6 @@ import pytest
 
 from src.preprocess import DataPreprocessor
 
-@pytest.fixture
-def input_data(test_config):
-    with open(f"{test_config.RESOURCES_FOLDER}/input.json", encoding="utf8") as j:
-        return json.load(j)
 
 def test_initialisation(test_config, input_data):
     data_preprocessor = DataPreprocessor(test_config, input_data)

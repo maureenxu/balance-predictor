@@ -12,6 +12,9 @@ import pandas as pd
 def flatten_json(j_obj: dict) -> dict:
     output = {}
 
+    if not isinstance(j_obj, (dict, list)):
+        raise ValueError(f"Input is of unexpected type: {type(j_obj)}")
+
     def flatten(x, name=""):
         if isinstance(x, dict):
             for a in x:
@@ -30,6 +33,11 @@ def flatten_json(j_obj: dict) -> dict:
 
 
 def parse_dt_string(dt_string: str) -> datetime.datetime:
+    # See: https://docs.python.org/3/library/datetime.html
+    #
+    # Can simplify to: ignore after the 12th character, parse the remainder:
+    # return datetime.datetime.strptime(dt_string[:12], '%Y%m%d%H%M')
+
     year = dt_string[:4]
     month = dt_string[4:6]
     day = dt_string[6:8]
@@ -42,9 +50,17 @@ def parse_dt_string(dt_string: str) -> datetime.datetime:
 
 
 def correct_credit_debt(cd_indicator: str, amount: float) -> float:
+    if cd_indicator not in ["C", "D"]:
+        # Would be good to explicitly mention alternative scenarios,
+        # to share design choices with new engineers. It also provides
+        # ways to manage when unexpected behavior occurs too often:
+        cd_indicator = "C"
+        print("Unknown CD_Indicator has occurred!")
+
     if cd_indicator == "D":
         amount = 0 - amount
 
+    # ... by default we will assume it is about Credit, not Debt.
     return amount
 
 

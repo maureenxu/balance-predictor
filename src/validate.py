@@ -13,7 +13,6 @@ class ModelValidator:
         self.model_pipeline = model_pipeline
         self.config = config
 
-        print(self.config.TARGET)
         self.X_test = self.df.drop([self.config.TARGET], axis=1)
         self.y_test = self.df.loc[:, self.config.TARGET]
         self.y_pred = self.model_pipeline.predict(self.X_test)

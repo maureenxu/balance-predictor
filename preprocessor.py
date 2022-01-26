@@ -3,7 +3,7 @@ import json
 import os
 
 from src import preprocess, utils
-import configuration as config
+import src.configuration as config
 
 
 def get_args():

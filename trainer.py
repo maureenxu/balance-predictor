@@ -3,7 +3,7 @@ import os
 import pickle
 
 from src import train, utils
-import configuration as config
+import src.configuration as config
 
 
 def get_args():

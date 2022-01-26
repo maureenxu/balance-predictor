@@ -11,6 +11,8 @@ def input_df(test_config):
 
 SPLIT_RATIO = 0.8
 
+# TODO: Add tests for remaining config settings.
+
 
 def test_assign_tiers(test_config, input_df):
     data_spliter = DataSpliter(test_config, input_df, SPLIT_RATIO)

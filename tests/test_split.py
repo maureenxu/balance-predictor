@@ -1,19 +1,21 @@
 import pytest
-import pandas as pd
 import joblib
 
 from src.split import DataSpliter
-import configuration as config
 
-INPUT_DF = joblib.load("../data/preprocessed_data.pkl")
-# print(INPUT_DF.columns)
-# print(INPUT_DF.dtypes)
-print(INPUT_DF.head())
+
+@pytest.fixture
+def input_df(test_config):
+    return joblib.load(f"{test_config.RESOURCES_FOLDER}/preprocessed_data.pkl")
+
 
 SPLIT_RATIO = 0.8
 
-def test_assign_tiers():
-    data_spliter = DataSpliter(INPUT_DF, SPLIT_RATIO)
+# TODO: Add tests for remaining config settings.
+
+
+def test_assign_tiers(test_config, input_df):
+    data_spliter = DataSpliter(test_config, input_df, SPLIT_RATIO)
     result = data_spliter.df.shape
 
     expected = (616, 43)
@@ -21,8 +23,8 @@ def test_assign_tiers():
     assert result == expected
 
 
-def test_split():
-    data_spliter = DataSpliter(INPUT_DF, SPLIT_RATIO)
+def test_split(test_config, input_df):
+    data_spliter = DataSpliter(test_config, input_df, SPLIT_RATIO)
     df_train_result, df_test_result = data_spliter.split()
 
     expected_train_shape = (493, 43)

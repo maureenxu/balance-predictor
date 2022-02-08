@@ -1,35 +1,42 @@
-import argparse
 import os
 import pickle
+import configparser
+
+from fastapi import FastAPI, Request, Response
 
 from src import split, utils
-import src.configuration as config
 
 app = FastAPI()
+
+config = configparser.ConfigParser()
+config.read_file("pipeline.config")
 
 
 @app.get("/start_splitting")
 async def split(request: Request):
+    config = request.app.state.config
+
     input_path = os.path.join(
-        args.input_path, config.INPUT_OUTPUT_FILENAMES["spliter"]["input"]
+        config["DEFAULT"]["base_path"], config["SPLITTER"]["input_path"]
     )
 
     with open(input_path, "rb") as input_file:
         df = pickle.load(input_file)
 
-    spliter = split.DataSpliter(df, args.split_ratio)
+    spliter = split.DataSpliter(df, config["SPLITTER"]["split_ratio"])
     df_train, df_test = spliter.split()
 
     utils.pickle_dump_output(
-        args.output_train_path,
-        config.INPUT_OUTPUT_FILENAMES["spliter"]["output_train"],
+        config["DEFAULT"]["base_path"],
+        config["SPLITTER"]["output_train_path"],
         df_train,
     )
+
     utils.pickle_dump_output(
-        args.output_test_path,
-        config.INPUT_OUTPUT_FILENAMES["spliter"]["output_test"],
+        config["DEFAULT"]["base_path"],
+        config["SPLITTER"]["output_test_path"],
         df_test,
     )
 
-    requests.get("trainer.localhost:8010/start_training")
+    request.get("trainer.localhost:8010/start_training")
     return Response(200)

@@ -8,9 +8,11 @@ import src.configuration as config
 app = FastAPI()
 
 
-@app.get('/start_splitting')
+@app.get("/start_splitting")
 async def split(request: Request):
-    input_path = os.path.join(args.input_path, config.INPUT_OUTPUT_FILENAMES["spliter"]["input"])
+    input_path = os.path.join(
+        args.input_path, config.INPUT_OUTPUT_FILENAMES["spliter"]["input"]
+    )
 
     with open(input_path, "rb") as input_file:
         df = pickle.load(input_file)
@@ -18,8 +20,16 @@ async def split(request: Request):
     spliter = split.DataSpliter(df, args.split_ratio)
     df_train, df_test = spliter.split()
 
-    utils.pickle_dump_output(args.output_train_path, config.INPUT_OUTPUT_FILENAMES["spliter"]["output_train"], df_train)
-    utils.pickle_dump_output(args.output_test_path, config.INPUT_OUTPUT_FILENAMES["spliter"]["output_test"], df_test)
+    utils.pickle_dump_output(
+        args.output_train_path,
+        config.INPUT_OUTPUT_FILENAMES["spliter"]["output_train"],
+        df_train,
+    )
+    utils.pickle_dump_output(
+        args.output_test_path,
+        config.INPUT_OUTPUT_FILENAMES["spliter"]["output_test"],
+        df_test,
+    )
 
-    requests.get('trainer.localhost:8010/start_training')
+    requests.get("trainer.localhost:8010/start_training")
     return Response(200)

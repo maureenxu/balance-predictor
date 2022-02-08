@@ -1,29 +1,24 @@
-import argparse
 import os
 import pickle
+import configparser
+
+from fastapi import FastAPI, Request, Response
 
 from src import train, utils
-import src.configuration as config
+
+app = FastAPI()
+
+config = configparser.ConfigParser()
+config.read_file("pipeline.config")
 
 
-def get_args():
-    parser = argparse.ArgumentParser(
-        prog="model_trainer",
-        description="train a model"
+@app.get("/start_training")
+async def train(request: Request):
+    config = request.app.state.config
+
+    input_path = os.path.join(
+        config["DEFAULT"]["base_path"], config["TRAINER"]["input_path"]
     )
-    parser.add_argument("--input-path", required=True, type=str)
-    parser.add_argument("--output-path", required=True, type=str)
-
-    args = parser.parse_args()
-
-    return args
-
-
-def main():
-    args = get_args()
-
-    input_path = os.path.join(args.input_path, config.INPUT_OUTPUT_FILENAMES["trainer"]["input"])
-
     with open(input_path, "rb") as input_file:
         df = pickle.load(input_file)
 
@@ -33,8 +28,8 @@ def main():
 
     print(f"the cross validation results are: {cv_results}")
 
-    utils.pickle_dump_output(args.output_path, config.INPUT_OUTPUT_FILENAMES["trainer"]["output"], model_pipeline)
+    utils.pickle_dump_output(
+        config["DEFAULT"]["base_path"], config["TRAINER"]["output_path"], model_pipeline
+    )
 
-
-if __name__ == "__main__":
-    main()
+    return Response(status_code=200)

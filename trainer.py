@@ -28,8 +28,13 @@ async def train(request: Request):
 
     print(f"the cross validation results are: {cv_results}")
 
+    # TODO: How to serialize/export model pipeline object to JSON format.
+    # Do not dump pickle, instead export as dict/JSON
     utils.pickle_dump_output(
         config["DEFAULT"]["base_path"], config["TRAINER"]["output_path"], model_pipeline
     )
 
-    return Response(status_code=200)
+    # Return JSON in response.
+    return JSONResponse(status_code=200, data={
+        'model': model_pipeline.dump()
+    })

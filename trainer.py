@@ -1,35 +1,55 @@
-import os
-import pickle
-import configparser
+import json
+import typing
 
-from fastapi import FastAPI, Request, Response
+import numpy
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+import sklearn_json as skljson
 
-from src import train, utils
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+
+from src.train import ModelTrainer
+from src.configuration import Config
 
 app = FastAPI()
 
-config = configparser.ConfigParser()
-config.read_file("pipeline.config")
+class JSONModelResponse(JSONResponse):
+    media_type = "application/json"
+
+    def _default_dumps(self, val):
+        if isinstance(val, numpy.ndarray):
+            return list(val)
+
+        if isinstance(val, RandomForestRegressor):
+            return skljson.to_dict(val)
+        
+        return val.__dict__
+
+    def render(self, content: typing.Any) -> bytes:
+        return json.dumps(
+            content,
+            ensure_ascii=False,
+            allow_nan=False,
+            indent=None,
+            separators=(",", ":"),
+            default=self._default_dumps
+        ).encode("utf-8")
 
 
-@app.get("/start_training")
+@app.post("/train")
 async def train(request: Request):
-    config = request.app.state.config
-
-    input_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["TRAINER"]["input_path"]
-    )
-    with open(input_path, "rb") as input_file:
-        df = pickle.load(input_file)
-
-    trainer = train.ModelTrainer(df, config.PARAMS)
+    data = await request.json()
+    df = pd.DataFrame.from_records(data)
+    
+    trainer = ModelTrainer(Config, df)
     cv_results = trainer.cross_validate()
     model_pipeline = trainer.train_model()
 
     print(f"the cross validation results are: {cv_results}")
 
-    utils.pickle_dump_output(
-        config["DEFAULT"]["base_path"], config["TRAINER"]["output_path"], model_pipeline
-    )
-
-    return Response(status_code=200)
+    return JSONModelResponse(
+        content={
+        "cv_result": cv_results,
+        "model": dict(model_pipeline.get_params())
+    })

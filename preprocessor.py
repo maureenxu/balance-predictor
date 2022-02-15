@@ -1,34 +1,20 @@
-import json
-import os
+from enum import Enum
+
 import configparser
+from typing import List
 
-from fastapi import FastAPI, Request, Response
+from pydantic import BaseModel
+from fastapi import Request, FastAPI
+from fastapi.responses import JSONResponse
 
-from src import preprocess, utils
+from src import preprocess
+from src.configuration import Config
 
 app = FastAPI()
 
-config = configparser.ConfigParser()
-config.read_file("pipeline.config")
-
-
-@app.get("/start_preprocessing")
-async def preprocess(request: Request):
-    config = request.app.state.config
-
-    input_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["PREPROCESSING"]["input_path"]
-    )
-    with open(input_path) as input_file:
-        data = json.load(input_file)
-
-    preprocessor = preprocess.DataPreprocessor(data)
+@app.post("/preprocess")
+async def preprocesser(request: Request):
+    data = await request.json()
+    preprocessor = preprocess.DataPreprocessor(Config, data)
     df_output = preprocessor.preprocess()
-
-    utils.pickle_dump_output(
-        config["DEFAULT"]["base_path"],
-        config["PREPROCESSING"]["output_path"],
-        df_output,
-    )
-
-    return Response(status_code=200)
+    return JSONResponse(content=df_output.to_dict(orient="records"))

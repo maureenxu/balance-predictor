@@ -1,49 +1,46 @@
-import os
-import pickle
-import configparser
+import pandas as pd
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import MinMaxScaler
+
+import sklearn_json as skljson
 
 from fastapi import FastAPI, Request, Response
+from fastapi.responses import JSONResponse
 
-from src import validate, utils
+from src.validate import ModelValidator
+from src.configuration import Config
 
 app = FastAPI()
 
-config = configparser.ConfigParser()
-config.read_file("pipeline.config")
 
+def load_model(model_params) -> Pipeline:
+    model = Config.MODEL.set_params(**Config.PARAMS)
+    model_pipeline = Pipeline(
+        steps=[("scaler", MinMaxScaler()), ("model", model)]
+    )
+    model_pipeline.set_params(**model_params)
+    return model_pipeline
 
-@app.get("/start_validating")
+@app.post("/validate")
 async def validate(request: Request):
-    config = request.app.state.config
+    data = await request.json()
 
-    input_test_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["VALIDATOR"]["data_path"]
-    )
-    input_model_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["VALIDATOR"]["model_path"]
-    )
+    test_data = data['test_data']
+    df = pd.DataFrame.from_records(test_data)
 
-    with open(input_test_path, "rb") as input_file:
-        df = pickle.load(input_file)
+    model_params = data['model']
+    print(load_model(model_params))
 
-    with open(input_model_path, "rb") as input_file:
-        model_pipeline = pickle.load(input_file)
+    return Response(200)
+    # model_pipeline = model_params_loader(model_params)
 
-    validator = validate.ModelValidator(df, model_pipeline)
-    metrics_dict = validator.get_metrics()
-    plt = validator.plot_hist_vs_pred()
+    # validator = ModelValidator(Config, df, model_pipeline)
+    # metrics_dict = validator.get_metrics()
 
-    print(f"the metrics are: {metrics_dict}")
+    # # plt = validator.plot_hist_vs_pred()
+    # # print(f"the metrics are: {metrics_dict}")
+    # # plt.savefig(fname=some_output_path)
 
-    utils.pickle_dump_output(
-        config["DEFAULT"]["base_path"],
-        config["VALIDATOR"]["output_metrics"],
-        metrics_dict,
-    )
-
-    output_plot_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["VALIDATOR"]["output_plot"]
-    )
-    plt.savefig(fname=output_plot_path)
-
-    return Response(status_code=200)
+    # return JSONResponse(content={
+    #     'metrics_dict': metrics_dict
+    # })

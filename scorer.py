@@ -1,3 +1,4 @@
+import json
 import os
 import pickle
 import configparser
@@ -5,21 +6,26 @@ from typing import Any, List
 
 from fastapi import FastAPI, Request, Response, BaseModel
 from fastapi.response import JSONResponse
+from sklearn.ensemble import RandomForestRegressor
 
-from src import train, utils
+from src.score import Scorer
+from src.configuration import Config
 
 app = FastAPI()
 
-BalanceHistory = List[int]
-
 # TODO: Define BalanceModel type
-BalanceModel = Any
+BalanceModel = RandomForestRegressor
 
 
 @app.post("/start_scoring")
-async def score(request: Request, balance_history: BalanceHistory, trained_model: BalanceModel):
-    scores = trained_model.predict(balance_history)
+async def score(request: Request, balance_history: str, trained_model: BalanceModel):
+    data = json.loads(balance_history)
 
-    return JSONResponse(status_code=200, data= {
-        "scores": scores
+    scorer = Scorer(Config, data, trained_model)
+    feature_array = scorer.prepare_feature_array()
+    
+    score = scorer.get_prediction(feature_array)
+    
+    return JSONResponse(status_code=200, data={
+        "scores": score
     })

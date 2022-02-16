@@ -4,7 +4,9 @@ import configparser
 
 from fastapi import FastAPI, Request, Response
 
-from src import split, utils
+from src.configuration import Config
+from src.split import DataSpliter
+from src.utils import *
 
 app = FastAPI()
 
@@ -23,16 +25,16 @@ async def split(request: Request):
     with open(input_path, "rb") as input_file:
         df = pickle.load(input_file)
 
-    spliter = split.DataSpliter(df, config["SPLITTER"]["split_ratio"])
+    spliter = DataSpliter(Config, df, config["SPLITTER"]["split_ratio"])
     df_train, df_test = spliter.split()
 
-    utils.pickle_dump_output(
+    pickle_dump_output(
         config["DEFAULT"]["base_path"],
         config["SPLITTER"]["output_train_path"],
         df_train,
     )
 
-    utils.pickle_dump_output(
+    pickle_dump_output(
         config["DEFAULT"]["base_path"],
         config["SPLITTER"]["output_test_path"],
         df_test,

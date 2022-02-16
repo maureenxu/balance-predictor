@@ -1,10 +1,10 @@
-import os
-import pickle
 import configparser
 
 from fastapi import FastAPI, Request, Response
 
-from src import train, utils
+from src.configuration import Config
+from src.train import ModelTrainer
+from src.utils import *
 
 app = FastAPI()
 
@@ -22,7 +22,7 @@ async def train(request: Request):
     with open(input_path, "rb") as input_file:
         df = pickle.load(input_file)
 
-    trainer = train.ModelTrainer(df, config.PARAMS)
+    trainer = ModelTrainer(Config, df, config.PARAMS)
     cv_results = trainer.cross_validate()
     model_pipeline = trainer.train_model()
 
@@ -30,7 +30,7 @@ async def train(request: Request):
 
     # TODO: How to serialize/export model pipeline object to JSON format.
     # Do not dump pickle, instead export as dict/JSON
-    utils.pickle_dump_output(
+    pickle_dump_output(
         config["DEFAULT"]["base_path"], config["TRAINER"]["output_path"], model_pipeline
     )
 

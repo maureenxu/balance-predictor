@@ -66,3 +66,15 @@ class DataPreprocessor:
             print(f"Exception during data preprocessing: {e}", end="\n")
 
             return None
+
+
+if __name__ == "__main__":
+    import json
+    from src.configuration import Config
+
+    input_path = "../data/input.json"
+    with open(input_path) as input_file:
+        data = json.load(input_file)
+
+    preprocessor = DataPreprocessor(config=Config, data=data)
+    df_output = preprocessor.preprocess()

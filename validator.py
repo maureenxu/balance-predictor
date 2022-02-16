@@ -4,7 +4,9 @@ import configparser
 
 from fastapi import FastAPI, Request, Response
 
-from src import validate, utils
+from.src.configuration import Config
+from src.validate import ModelValidator
+from src.utils import *
 
 app = FastAPI()
 
@@ -29,13 +31,13 @@ async def validate(request: Request):
     with open(input_model_path, "rb") as input_file:
         model_pipeline = pickle.load(input_file)
 
-    validator = validate.ModelValidator(df, model_pipeline)
+    validator = ModelValidator(Config, df, model_pipeline)
     metrics_dict = validator.get_metrics()
     plt = validator.plot_hist_vs_pred()
 
     print(f"the metrics are: {metrics_dict}")
 
-    utils.pickle_dump_output(
+    pickle_dump_output(
         config["DEFAULT"]["base_path"],
         config["VALIDATOR"]["output_metrics"],
         metrics_dict,

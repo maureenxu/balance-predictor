@@ -1,0 +1,37 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  preprocessor:
+    build:
+      context: .
+      dockerfile: pipeline.Dockerfile
+      args:
+        - SERVICE_PATH=pipeline.preprocessor:app
+    ports:
+      - "8000:8000"
+
+  splitter:
+    build:
+      context: .
+      dockerfile: pipeline.Dockerfile
+      args:
+        - SERVICE_PATH=pipeline.splitter:app
+    ports:
+      - "8001:8000"
+
+  trainer:
+    build:
+      context: .
+      dockerfile: pipeline.Dockerfile
+      args:
+        - SERVICE_PATH=pipeline.trainer:app
+    ports:
+      - "8002:8000"
+
+  validator:
+    build:
+      context: .
+      dockerfile: pipeline.Dockerfile
+      args:
+        - SERVICE_PATH=pipeline.validator:app
+    ports:
+      - "8003:8000"

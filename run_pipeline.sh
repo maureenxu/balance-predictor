@@ -12,7 +12,7 @@ exit_on_error () {
 }
 
 echo "Start preprocessing the data..."
-PREPROCESSED=$(cat data/input.json | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://127.0.0.1:8000/preprocess)
+PREPROCESSED=$(cat data/input.json | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://localhost:8000/preprocess)
 exit_on_error $?
 echo
 write_metadata "PREPROCESSING" $PREPROCESSED

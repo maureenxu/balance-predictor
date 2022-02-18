@@ -27,7 +27,7 @@ cov:
 	. .venv/bin/activate && pytest --cov=src --cov-report xml --ignore=tests_old .
 
 fix:
-	. .venv/bin/activate && black src tests
+	. .venv/bin/activate && black .
 
 run:
 	bash ./run_services.sh

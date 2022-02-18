@@ -13,28 +13,29 @@ from src.validate import ModelValidator
 from src.configuration import Config
 
 app = FastAPI()
-__version__ = importlib.metadata.version('MLOps-BalancePredictor-demo')
+__version__ = importlib.metadata.version("MLOps-BalancePredictor-demo")
 
 
 def add_metadata(content: dict):
     return {
-        'out': content,
-        'datetime': datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
-        'version': __version__
+        "out": content,
+        "datetime": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "version": __version__,
     }
 
 
 def deserialize_model(serialized_model: str) -> Pipeline:
-    return pickle.loads(base64.b64decode(serialized_model.encode('utf-8')))
+    return pickle.loads(base64.b64decode(serialized_model.encode("utf-8")))
+
 
 @app.post("/validate")
 async def validate(request: Request, show_plot: bool = False):
     data = await request.json()
 
-    test_data = data['test_data']
+    test_data = data["test_data"]
     df = pd.DataFrame.from_records(test_data)
 
-    serialized_model = data['model']
+    serialized_model = data["model"]
     model_pipeline = deserialize_model(serialized_model)
 
     validator = ModelValidator(Config, df, model_pipeline)
@@ -45,7 +46,6 @@ async def validate(request: Request, show_plot: bool = False):
         print(f"the metrics are: {metrics_dict}")
         plt.show()
 
-    return JSONResponse(content=add_metadata({
-        'metrics_dict': metrics_dict,
-        'model': serialized_model
-    }))
+    return JSONResponse(
+        content=add_metadata({"metrics_dict": metrics_dict, "model": serialized_model})
+    )

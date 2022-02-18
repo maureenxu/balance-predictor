@@ -4,7 +4,7 @@ import pandas as pd
 from src.configuration import Config
 
 # pylint: disable=too-few-public-methods
-class DataSpliter:
+class DataSplitter:
     def __init__(self, config: Config, df: pd.DataFrame):
         self.config = config
         self.df = self._assign_tiers(df)

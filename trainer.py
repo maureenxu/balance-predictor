@@ -48,6 +48,7 @@ async def train(request: Request):
 
     print(f"the cross validation results are: {cv_results}")
 
+    ## TODO: 1) pickle + base64 (or parameters)
     return JSONModelResponse(
         content={
         "cv_result": cv_results,

@@ -12,6 +12,7 @@ from src.configuration import Config
 
 app = FastAPI()
 
+
 @app.post("/preprocess")
 async def preprocesser(request: Request):
     data = await request.json()

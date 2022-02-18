@@ -1,13 +1,14 @@
 import json
+import base64
+import pickle
 import typing
 
 import numpy
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
-import sklearn_json as skljson
 
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+from sklearn.pipeline import Pipeline
 
 from src.train import ModelTrainer
 from src.configuration import Config
@@ -21,11 +22,6 @@ class JSONModelResponse(JSONResponse):
         if isinstance(val, numpy.ndarray):
             return list(val)
 
-        if isinstance(val, RandomForestRegressor):
-            return skljson.to_dict(val)
-        
-        return val.__dict__
-
     def render(self, content: typing.Any) -> bytes:
         return json.dumps(
             content,
@@ -37,6 +33,10 @@ class JSONModelResponse(JSONResponse):
         ).encode("utf-8")
 
 
+def serialize_model(model_pipeline: Pipeline) -> str:
+    return base64.b64encode(pickle.dumps(model_pipeline)).decode('utf-8')
+
+
 @app.post("/train")
 async def train(request: Request):
     data = await request.json()
@@ -46,11 +46,8 @@ async def train(request: Request):
     cv_results = trainer.cross_validate()
     model_pipeline = trainer.train_model()
 
-    print(f"the cross validation results are: {cv_results}")
-
-    ## TODO: 1) pickle + base64 (or parameters)
     return JSONModelResponse(
         content={
         "cv_result": cv_results,
-        "model": dict(model_pipeline.get_params())
+        "model": serialize_model(model_pipeline)
     })

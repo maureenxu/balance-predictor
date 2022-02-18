@@ -1,3 +1,4 @@
+SHOW_PLOT=${1:-true}
 
 PREPROCESSED=$(cat data/input.json | curl -H "Content-Type: application/json" -X POST -d @- http://127.0.0.1:8000/preprocess)
 SPLITTED=$(echo $PREPROCESSED | curl -H "Content-Type: application/json" -X POST -d @- http://localhost:8001/split)
@@ -8,5 +9,5 @@ TRAINED=$(echo $TRAIN_DATA | curl -H "Content-Type: application/json" -X POST -d
 CV_RESULT=$(echo $TRAINED | jq .cv_result)
 MODEL=$(echo $TRAINED | jq .model)
 
-VALIDATION=$(echo "{\"model\": $MODEL, \"test_data\": $TEST_DATA}" | curl -H "Content-Type: application/json" -X POST -d @- http://localhost:8003/validate)
-echo $VALIDATION
+VALIDATION=$(echo "{\"model\": $MODEL, \"test_data\": $TEST_DATA}" | curl -H "Content-Type: application/json" -X POST -d @- http://localhost:8003/validate?show_plot=$SHOW_PLOT)
+echo $VALIDATION | jq .metrics_dict

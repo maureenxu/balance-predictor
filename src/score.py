@@ -54,7 +54,7 @@ class Scorer:
 
         # shift and calculate diffs
         df_add_shift_diff = df_agg.copy()
-        for i in range(self.config.SHIFT_NUM+1):
+        for i in range(self.config.SHIFT_NUM + 1):
             df_add_shift_diff.loc[:, self.config.TARGET + "_lag" + str(i + 1)] = \
                 df_add_shift_diff.loc[:, self.config.TARGET].shift(i + 1)
 
@@ -66,4 +66,7 @@ class Scorer:
         return scoring_feature_array
 
     def get_prediction(self, scoring_feature_array: np.ndarray) -> float:
-        return self.model.predict(scoring_feature_array)
+        try:
+            return self.model.predict(scoring_feature_array)
+        except:
+            return -1.0

@@ -1,3 +1,6 @@
+import pickle
+from datetime import timedelta
+
 import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
@@ -54,7 +57,13 @@ class Scorer:
 
         # shift and calculate diffs
         df_add_shift_diff = df_agg.copy()
-        for i in range(self.config.SHIFT_NUM + 1):
+
+        # add one more row with last date + 1 day
+        last_date = df_add_shift_diff.index[-1]
+        next_date = last_date + timedelta(days=1)
+        df_add_shift_diff.loc[next_date] = np.nan
+
+        for i in range(self.config.SHIFT_NUM):
             df_add_shift_diff.loc[:, self.config.TARGET + "_lag" + str(i + 1)] = \
                 df_add_shift_diff.loc[:, self.config.TARGET].shift(i + 1)
 
@@ -67,6 +76,25 @@ class Scorer:
 
     def get_prediction(self, scoring_feature_array: np.ndarray) -> float:
         try:
-            return self.model.predict(scoring_feature_array)
-        except:
+            score = self.model.predict([scoring_feature_array])
+            return score
+        except Exception as e:
+            print(f"exception {e}")
             return -1.0
+
+# if __name__=="__main__":
+#     import json
+#     from configuration import Config
+#
+#     input_path = "../data/input.json"
+#     with open(input_path) as input_file:
+#         data = json.load(input_file)
+#
+#     with open("../data/model_pipeline.pickle", "rb") as file:
+#         model_pipeline = pickle.load(file)
+#
+#     scorer = Scorer(Config, data, model_pipeline)
+#     feature_array = scorer.prepare_feature_array()
+#
+#     score = scorer.get_prediction(feature_array)
+#     print(score)

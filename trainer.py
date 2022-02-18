@@ -1,5 +1,8 @@
+from datetime import datetime
 import json
 import base64
+import importlib.metadata
+
 import pickle
 import typing
 
@@ -14,6 +17,16 @@ from src.train import ModelTrainer
 from src.configuration import Config
 
 app = FastAPI()
+__version__ = importlib.metadata.version('MLOps-BalancePredictor-demo')
+
+
+def add_metadata(content: dict):
+    return {
+        'out': content,
+        'datetime': datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
+        'version': __version__
+    }
+
 
 class JSONModelResponse(JSONResponse):
     media_type = "application/json"
@@ -47,7 +60,7 @@ async def train(request: Request):
     model_pipeline = trainer.train_model()
 
     return JSONModelResponse(
-        content={
+        content=add_metadata({
         "cv_result": cv_results,
         "model": serialize_model(model_pipeline)
-    })
+    }))

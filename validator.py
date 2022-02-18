@@ -1,3 +1,6 @@
+from datetime import datetime
+import importlib.metadata
+
 import base64
 import pickle
 import pandas as pd
@@ -10,6 +13,15 @@ from src.validate import ModelValidator
 from src.configuration import Config
 
 app = FastAPI()
+__version__ = importlib.metadata.version('MLOps-BalancePredictor-demo')
+
+
+def add_metadata(content: dict):
+    return {
+        'out': content,
+        'datetime': datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
+        'version': __version__
+    }
 
 
 def deserialize_model(serialized_model: str) -> Pipeline:
@@ -33,7 +45,7 @@ async def validate(request: Request, show_plot: bool = False):
         print(f"the metrics are: {metrics_dict}")
         plt.show()
 
-    return JSONResponse(content={
+    return JSONResponse(content=add_metadata({
         'metrics_dict': metrics_dict,
         'model': serialized_model
-    })
+    }))

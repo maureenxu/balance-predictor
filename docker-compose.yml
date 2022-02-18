@@ -35,3 +35,12 @@ services:
         - SERVICE_PATH=pipeline.validator:app
     ports:
       - "8003:8000"
+
+  scorer:
+    build:
+      context: .
+      dockerfile: pipeline.Dockerfile
+      args:
+        - SERVICE_PATH=pipeline.scorer:app
+    ports:
+      - "8004:8000"

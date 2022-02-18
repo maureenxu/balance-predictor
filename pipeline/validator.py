@@ -6,7 +6,7 @@ import pickle
 import pandas as pd
 from sklearn.pipeline import Pipeline
 
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from src.validate import ModelValidator
@@ -24,28 +24,33 @@ def add_metadata(content: dict):
     }
 
 
-def deserialize_model(serialized_model: str) -> Pipeline:
-    return pickle.loads(base64.b64decode(serialized_model.encode("utf-8")))
+def pickle_deserialize(serialized_obj: str) -> Pipeline:
+    return pickle.loads(base64.b64decode(serialized_obj.encode("utf-8")))
 
+
+def pickle_serialize(obj: object):
+    return base64.b64encode(pickle.dumps(obj)).decode("utf-8")
 
 @app.post("/validate")
-async def validate(request: Request, show_plot: bool = False):
+async def validate(request: Request):
     data = await request.json()
 
     test_data = data["test_data"]
     df = pd.DataFrame.from_records(test_data)
 
     serialized_model = data["model"]
-    model_pipeline = deserialize_model(serialized_model)
+    model_pipeline = pickle_deserialize(serialized_model)
 
     validator = ModelValidator(Config, df, model_pipeline)
     metrics_dict = validator.get_metrics()
 
-    if show_plot:
-        plt = validator.plot_hist_vs_pred()
-        print(f"the metrics are: {metrics_dict}")
-        plt.show()
+    plt = validator.plot_hist_vs_pred()
+    serialized_plt = pickle_serialize(plt.gcf())
 
     return JSONResponse(
-        content=add_metadata({"metrics_dict": metrics_dict, "model": serialized_model})
+        content=add_metadata({
+            "metrics_dict": metrics_dict, 
+            "model": serialized_model,
+            "validate_plot": serialized_plt
+        })
     )

@@ -46,8 +46,8 @@ class JSONModelResponse(JSONResponse):
         ).encode("utf-8")
 
 
-def serialize_model(model_pipeline: Pipeline) -> str:
-    return base64.b64encode(pickle.dumps(model_pipeline)).decode("utf-8")
+def pickle_serialize(obj: object):
+    return base64.b64encode(pickle.dumps(obj)).decode("utf-8")
 
 
 @app.post("/train")
@@ -61,6 +61,6 @@ async def train(request: Request):
 
     return JSONModelResponse(
         content=add_metadata(
-            {"cv_result": cv_results, "model": serialize_model(model_pipeline)}
+            {"cv_result": cv_results, "model": pickle_serialize(model_pipeline)}
         )
     )

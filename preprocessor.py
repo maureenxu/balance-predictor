@@ -1,34 +1,28 @@
-import json
-import os
-import configparser
+from datetime import datetime
+import importlib.metadata
 
-from fastapi import FastAPI, Request, Response
+from fastapi import Request, FastAPI
+from fastapi.responses import JSONResponse
 
-from src import preprocess, utils
+from src import preprocess
+from src.configuration import Config
+
 
 app = FastAPI()
-
-config = configparser.ConfigParser()
-config.read_file("pipeline.config")
+__version__ = importlib.metadata.version("MLOps-BalancePredictor-demo")
 
 
-@app.get("/start_preprocessing")
-async def preprocess(request: Request):
-    config = request.app.state.config
+def add_metadata(content: dict):
+    return {
+        "out": content,
+        "datetime": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "version": __version__,
+    }
 
-    input_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["PREPROCESSING"]["input_path"]
-    )
-    with open(input_path) as input_file:
-        data = json.load(input_file)
 
-    preprocessor = preprocess.DataPreprocessor(data)
+@app.post("/preprocess")
+async def preprocesser(request: Request):
+    data = await request.json()
+    preprocessor = preprocess.DataPreprocessor(Config, data)
     df_output = preprocessor.preprocess()
-
-    utils.pickle_dump_output(
-        config["DEFAULT"]["base_path"],
-        config["PREPROCESSING"]["output_path"],
-        df_output,
-    )
-
-    return Response(status_code=200)
+    return JSONResponse(content=add_metadata(df_output.to_dict(orient="records")))

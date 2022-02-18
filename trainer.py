@@ -1,35 +1,66 @@
-import os
+from datetime import datetime
+import json
+import base64
+import importlib.metadata
+
 import pickle
-import configparser
+import typing
 
-from fastapi import FastAPI, Request, Response
+import numpy
+import pandas as pd
 
-from src import train, utils
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
+from sklearn.pipeline import Pipeline
+
+from src.train import ModelTrainer
+from src.configuration import Config
 
 app = FastAPI()
-
-config = configparser.ConfigParser()
-config.read_file("pipeline.config")
+__version__ = importlib.metadata.version("MLOps-BalancePredictor-demo")
 
 
-@app.get("/start_training")
+def add_metadata(content: dict):
+    return {
+        "out": content,
+        "datetime": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "version": __version__,
+    }
+
+
+class JSONModelResponse(JSONResponse):
+    media_type = "application/json"
+
+    def _default_dumps(self, val):
+        if isinstance(val, numpy.ndarray):
+            return list(val)
+
+    def render(self, content: typing.Any) -> bytes:
+        return json.dumps(
+            content,
+            ensure_ascii=False,
+            allow_nan=False,
+            indent=None,
+            separators=(",", ":"),
+            default=self._default_dumps,
+        ).encode("utf-8")
+
+
+def serialize_model(model_pipeline: Pipeline) -> str:
+    return base64.b64encode(pickle.dumps(model_pipeline)).decode("utf-8")
+
+
+@app.post("/train")
 async def train(request: Request):
-    config = request.app.state.config
+    data = await request.json()
+    df = pd.DataFrame.from_records(data)
 
-    input_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["TRAINER"]["input_path"]
-    )
-    with open(input_path, "rb") as input_file:
-        df = pickle.load(input_file)
-
-    trainer = train.ModelTrainer(df, config.PARAMS)
+    trainer = ModelTrainer(Config, df)
     cv_results = trainer.cross_validate()
     model_pipeline = trainer.train_model()
 
-    print(f"the cross validation results are: {cv_results}")
-
-    utils.pickle_dump_output(
-        config["DEFAULT"]["base_path"], config["TRAINER"]["output_path"], model_pipeline
+    return JSONModelResponse(
+        content=add_metadata(
+            {"cv_result": cv_results, "model": serialize_model(model_pipeline)}
+        )
     )
-
-    return Response(status_code=200)

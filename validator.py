@@ -1,49 +1,51 @@
-import os
+from datetime import datetime
+import importlib.metadata
+
+import base64
 import pickle
-import configparser
+import pandas as pd
+from sklearn.pipeline import Pipeline
 
 from fastapi import FastAPI, Request, Response
+from fastapi.responses import JSONResponse
 
-from src import validate, utils
+from src.validate import ModelValidator
+from src.configuration import Config
 
 app = FastAPI()
-
-config = configparser.ConfigParser()
-config.read_file("pipeline.config")
+__version__ = importlib.metadata.version("MLOps-BalancePredictor-demo")
 
 
-@app.get("/start_validating")
-async def validate(request: Request):
-    config = request.app.state.config
+def add_metadata(content: dict):
+    return {
+        "out": content,
+        "datetime": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "version": __version__,
+    }
 
-    input_test_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["VALIDATOR"]["data_path"]
-    )
-    input_model_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["VALIDATOR"]["model_path"]
-    )
 
-    with open(input_test_path, "rb") as input_file:
-        df = pickle.load(input_file)
+def deserialize_model(serialized_model: str) -> Pipeline:
+    return pickle.loads(base64.b64decode(serialized_model.encode("utf-8")))
 
-    with open(input_model_path, "rb") as input_file:
-        model_pipeline = pickle.load(input_file)
 
-    validator = validate.ModelValidator(df, model_pipeline)
+@app.post("/validate")
+async def validate(request: Request, show_plot: bool = False):
+    data = await request.json()
+
+    test_data = data["test_data"]
+    df = pd.DataFrame.from_records(test_data)
+
+    serialized_model = data["model"]
+    model_pipeline = deserialize_model(serialized_model)
+
+    validator = ModelValidator(Config, df, model_pipeline)
     metrics_dict = validator.get_metrics()
-    plt = validator.plot_hist_vs_pred()
 
-    print(f"the metrics are: {metrics_dict}")
+    if show_plot:
+        plt = validator.plot_hist_vs_pred()
+        print(f"the metrics are: {metrics_dict}")
+        plt.show()
 
-    utils.pickle_dump_output(
-        config["DEFAULT"]["base_path"],
-        config["VALIDATOR"]["output_metrics"],
-        metrics_dict,
+    return JSONResponse(
+        content=add_metadata({"metrics_dict": metrics_dict, "model": serialized_model})
     )
-
-    output_plot_path = os.path.join(
-        config["DEFAULT"]["base_path"], config["VALIDATOR"]["output_plot"]
-    )
-    plt.savefig(fname=output_plot_path)
-
-    return Response(status_code=200)

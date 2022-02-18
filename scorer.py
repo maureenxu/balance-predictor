@@ -1,33 +1,31 @@
+import base64
 import json
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import MinMaxScaler
-import os
 import pickle
-import configparser
-from typing import Any, List
 
-from fastapi import FastAPI, Request, Response, BaseModel
-from fastapi.response import JSONResponse
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 
 from src.score import Scorer
 from src.configuration import Config
 
 app = FastAPI()
 
-def load_model(model_params) -> Pipeline:
-    model = Config.MODEL.set_params(**Config.PARAMS)
-    model_pipeline = Pipeline(
-        steps=[("scaler", MinMaxScaler()), ("model", model)]
-    )
-    model_pipeline.set_params(**model_params)
-    return model_pipeline
+def deserialize_model(serialized_model: str) -> Pipeline:
+    return pickle.loads(base64.b64decode(serialized_model.encode('utf-8')))
 
-@app.post("/Score")
-async def score(request: Request, balance_history: str, trained_model: BalanceModel):
-    from sklearn.preprocessing import MinMaxScaler
-    data = json.loads(balance_history)
 
-    scorer = Scorer(Config, data, trained_model)
+@app.post("/score")
+async def score(request: Request):
+    data = await request.json()
+
+    balance_history = data['balance_history']
+    input_data = json.loads(balance_history)
+
+    serialized_model = data['model']
+    model_pipeline = deserialize_model(serialized_model)
+
+    scorer = Scorer(Config, input_data, model_pipeline)
     feature_array = scorer.prepare_feature_array()
     
     score = scorer.get_prediction(feature_array)

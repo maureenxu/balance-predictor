@@ -1,13 +1,13 @@
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.pipeline import Pipeline
 import src.utils as ut
 
 from src.configuration import Config
 
 
 class Scorer:
-    def __init__(self, config: Config, data: list, model: RandomForestRegressor):
+    def __init__(self, config: Config, data: list, model: Pipeline):
         self.config = config
 
         # convert json object to dataframe

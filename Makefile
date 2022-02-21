@@ -19,7 +19,7 @@ setup: venv
 
 lint:
 	. .venv/bin/activate && pylint src
-	. .venv/bin/activate && black -check src tests
+	. .venv/bin/activate && black --check .
 
 test:
 	. .venv/bin/activate && pytest --ignore=tests_old .

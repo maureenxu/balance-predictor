@@ -31,19 +31,3 @@ class Config:
     # the granularity for aggregation in data preprocessing step
     # aggregate data by, 'D' by day, '1W' by week, 'M' by month, 'Y' by year
     AGG_BY = "D"
-
-    INPUT_OUTPUT_FILENAMES = {
-        "preprocessor": {"input": "input.json", "output": "preprocessed_data.pickle"},
-        "spliter": {
-            "input": "preprocessed_data.pickle",
-            "output_train": "training_data.pickle",
-            "output_test": "testing_data.pickle",
-        },
-        "trainer": {"input": "training_data.pickle", "output": "model.pickle"},
-        "validator": {
-            "input_test": "testing_data.pickle",
-            "input_model": "model.pickle",
-            "output_metrics": "metrics_dict.pickle",
-            "output_plot": "hist_vs_pred.png",
-        },
-    }

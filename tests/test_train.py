@@ -13,7 +13,7 @@ PARAMS = {"n_estimators": 50, "max_depth": 3, "min_impurity_decrease": 0}
 
 
 def test_initialisation(test_config, input_df):
-    mt = ModelTrainer(test_config, input_df, PARAMS)
+    mt = ModelTrainer(test_config, input_df)
 
     result_X = mt.X_train.shape
     result_y = mt.y_train.shape
@@ -26,14 +26,14 @@ def test_initialisation(test_config, input_df):
 
 
 def test_cross_validate(test_config, input_df):
-    mt = ModelTrainer(test_config, input_df, PARAMS)
+    mt = ModelTrainer(test_config, input_df)
     cv_results = mt.cross_validate()
 
     assert cv_results is not None
 
 
 def test_train_model(test_config, input_df):
-    mt = ModelTrainer(test_config, input_df, PARAMS)
+    mt = ModelTrainer(test_config, input_df)
     model_pipeline = mt.train_model()
 
     assert model_pipeline is not None

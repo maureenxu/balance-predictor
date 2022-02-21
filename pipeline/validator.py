@@ -31,6 +31,7 @@ def pickle_deserialize(serialized_obj: str) -> Pipeline:
 def pickle_serialize(obj: object):
     return base64.b64encode(pickle.dumps(obj)).decode("utf-8")
 
+
 @app.post("/validate")
 async def validate(request: Request):
     data = await request.json()
@@ -48,9 +49,11 @@ async def validate(request: Request):
     serialized_plt = pickle_serialize(plt.gcf())
 
     return JSONResponse(
-        content=add_metadata({
-            "metrics_dict": metrics_dict, 
-            "model": serialized_model,
-            "validate_plot": serialized_plt
-        })
+        content=add_metadata(
+            {
+                "metrics_dict": metrics_dict,
+                "model": serialized_model,
+                "validate_plot": serialized_plt,
+            }
+        )
     )

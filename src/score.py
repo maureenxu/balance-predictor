@@ -1,4 +1,3 @@
-import pickle
 from datetime import timedelta
 
 import numpy as np
@@ -64,13 +63,19 @@ class Scorer:
         df_add_shift_diff.loc[next_date] = np.nan
 
         for i in range(self.config.SHIFT_NUM):
-            df_add_shift_diff.loc[:, self.config.TARGET + "_lag" + str(i + 1)] = \
-                df_add_shift_diff.loc[:, self.config.TARGET].shift(i + 1)
+            df_add_shift_diff.loc[
+                :, self.config.TARGET + "_lag" + str(i + 1)
+            ] = df_add_shift_diff.loc[:, self.config.TARGET].shift(i + 1)
 
-            df_add_shift_diff.loc[:, self.config.TARGET + "_diff" + str(i + 1)] = \
-                df_add_shift_diff.loc[:, self.config.TARGET + "_lag" + str(i + 1)].diff()
+            df_add_shift_diff.loc[
+                :, self.config.TARGET + "_diff" + str(i + 1)
+            ] = df_add_shift_diff.loc[
+                :, self.config.TARGET + "_lag" + str(i + 1)
+            ].diff()
 
-        scoring_feature_array = df_add_shift_diff.drop([self.config.TARGET], axis=1).iloc[-1].values
+        scoring_feature_array = (
+            df_add_shift_diff.drop([self.config.TARGET], axis=1).iloc[-1].values
+        )
 
         return scoring_feature_array
 
@@ -78,9 +83,11 @@ class Scorer:
         try:
             score = self.model.predict([scoring_feature_array])
             return score
+        # pylint: disable=broad-except
         except Exception as e:
             print(f"exception {e}")
             return -1.0
+
 
 # if __name__=="__main__":
 #     import json

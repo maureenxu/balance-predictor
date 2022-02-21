@@ -10,3 +10,4 @@ python_dateutil==2.8.2
 scikit_learn
 fastapi
 uvicorn
+pynacl

@@ -11,21 +11,14 @@ import pandas as pd
 
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
-from sklearn.pipeline import Pipeline
 
 from src.train import ModelTrainer
 from src.configuration import Config
 
+from .utils import add_metadata, pickle_serialize
+
 app = FastAPI()
-__version__ = importlib.metadata.version("MLOps-BalancePredictor-demo")
 
-
-def add_metadata(content: dict):
-    return {
-        "out": content,
-        "datetime": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
-        "version": __version__,
-    }
 
 
 class JSONModelResponse(JSONResponse):
@@ -45,9 +38,6 @@ class JSONModelResponse(JSONResponse):
             default=self._default_dumps,
         ).encode("utf-8")
 
-
-def pickle_serialize(obj: object):
-    return base64.b64encode(pickle.dumps(obj)).decode("utf-8")
 
 
 @app.post("/train")

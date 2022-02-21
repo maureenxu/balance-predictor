@@ -1,3 +1,15 @@
+if [ "$#" -ne 4 ]; then
+    echo "Illegal number of arguments";
+    exit 1
+fi
+
+PREPROCESSOR_SERVICE=$1
+SPLITTER_SERVICE=$2
+TRAINER_SERVICE=$3
+VALIDATOR_SERVICE=$4
+
+echo "Service URL's: $PREPROCESSOR_SERVICE, $SPLITTER_SERVICE, $TRAINER_SERVICE, $VALIDATOR_SERVICE"
+
 show_help () {
     echo
     echo "Help: "
@@ -40,13 +52,13 @@ exit_on_error () {
 }
 
 echo "Start preprocessing the data..."
-PREPROCESSED=$(cat data/input.json | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://localhost:8000/preprocess)
+PREPROCESSED=$(cat data/input.json | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://$PREPROCESSOR_SERVICE/preprocess)
 exit_on_error $?
 echo
 write_metadata "PREPROCESSING" $PREPROCESSED
 echo
 echo "Start splitting the data..."
-SPLITTED=$(echo $PREPROCESSED | jq .out | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://localhost:8001/split)
+SPLITTED=$(echo $PREPROCESSED | jq .out | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://$SPLITTER_SERVICE/split)
 exit_on_error $?
 
 TRAIN_DATA=$(echo $SPLITTED | jq .out.train)
@@ -55,7 +67,7 @@ echo
 write_metadata "SPLITTING" $SPLITTED
 echo
 echo "Start training the using the training data..."
-TRAINED=$(echo $TRAIN_DATA | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://localhost:8002/train)
+TRAINED=$(echo $TRAIN_DATA | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://$TRAINER_SERVICE/train)
 exit_on_error $?
 
 CV_RESULT=$(echo $TRAINED | jq .out.cv_result)
@@ -64,7 +76,7 @@ echo
 write_metadata "TRAINING" $TRAINED
 echo
 echo "Start validating using the test data, and model..."
-VALIDATION=$(echo "{\"model\": $MODEL, \"test_data\": $TEST_DATA}" | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://localhost:8003/validate)
+VALIDATION=$(echo "{\"model\": $MODEL, \"test_data\": $TEST_DATA}" | curl --show-error --fail -s -H "Content-Type: application/json" -X POST -d @- http://$VALIDATOR_SERVICE/validate)
 exit_on_error $?
 
 METRICS_DICT=$(echo $VALIDATION | jq .out.metrics_dict)
@@ -82,6 +94,5 @@ if [ $save_model == 1 ]; then
     mkdir -p models
 
     echo "Saving model to 'models/$MODEL_NAME.json'"
-    # echo $VALIDATION > models/$MODEL_NAME.json
     echo "{\"model_data\": $VALIDATION, \"test_data\": $TEST_DATA, \"train_data\": $TRAIN_DATA}" > models/$MODEL_NAME.json
 fi

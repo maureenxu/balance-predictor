@@ -74,7 +74,7 @@ echo "We have finished: Preprocessing, Splitting, Training & validating the mode
 echo $METRICS_DICT | jq .
 
 
-if [ "$save_model" = true ]; then
+if [ $save_model == 1 ]; then
     MODEL_NAME=$(echo $VALIDATION | jq .out.model | sha1sum | awk '{print $1}')
     MODEL_DATETIME=$(echo $VALIDATION | jq .datetime)
     MODEL_VERSION=$(echo $VALIDATION | jq .version)

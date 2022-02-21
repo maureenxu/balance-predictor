@@ -40,6 +40,5 @@ async def score(request: Request):
     score = scorer.get_prediction(feature_array)
     
     return JSONResponse(status_code=200, content={
-        "scores": score,
-        "model": serialized_model
+        "scores": score
     })

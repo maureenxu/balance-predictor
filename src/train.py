@@ -7,10 +7,10 @@ from src.configuration import Config
 
 
 class ModelTrainer:
-    def __init__(self, config: Config, df_train: pd.DataFrame, params: dict):
+    def __init__(self, config: Config, df_train: pd.DataFrame):
         self.df = df_train
         self.config = config
-        self.model = self.config.MODEL.set_params(**params)
+        self.model = self.config.MODEL.set_params(**config.PARAMS)
         self.model_pipeline = Pipeline(
             steps=[("scaler", MinMaxScaler()), ("model", self.model)]
         )
@@ -33,6 +33,8 @@ class ModelTrainer:
 
     def train_model(self):
         self.model_pipeline.fit(self.X_train, self.y_train)
+
+        print(self.model_pipeline.__dict__)
 
         return self.model_pipeline
 

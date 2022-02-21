@@ -4,9 +4,8 @@ import pandas as pd
 from src.configuration import Config
 
 # pylint: disable=too-few-public-methods
-class DataSpliter:
-    def __init__(self, config: Config, df: pd.DataFrame, split_ratio: float):
-        self.split_ratio = split_ratio
+class DataSplitter:
+    def __init__(self, config: Config, df: pd.DataFrame):
         self.config = config
         self.df = self._assign_tiers(df)
 
@@ -28,8 +27,8 @@ class DataSpliter:
             (df[self.config.TARGET] >= lower) & (df[self.config.TARGET] < upper), :
         ]
 
-    def split(self):
-        split_idx = int(self.df.shape[0] * self.split_ratio)
+    def split(self, split_ratio: float):
+        split_idx = int(self.df.shape[0] * split_ratio)
         split_date = self.df.index[split_idx]
 
         self.df_train = self.df.loc[self.df.index <= split_date, :].copy()

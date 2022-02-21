@@ -1,7 +1,7 @@
 import pytest
 import joblib
 
-from src.split import DataSpliter
+from src.split import DataSplitter
 
 
 @pytest.fixture
@@ -15,7 +15,7 @@ SPLIT_RATIO = 0.8
 
 
 def test_assign_tiers(test_config, input_df):
-    data_spliter = DataSpliter(test_config, input_df, SPLIT_RATIO)
+    data_spliter = DataSplitter(test_config, input_df, SPLIT_RATIO)
     result = data_spliter.df.shape
 
     expected = (616, 43)
@@ -24,7 +24,7 @@ def test_assign_tiers(test_config, input_df):
 
 
 def test_split(test_config, input_df):
-    data_spliter = DataSpliter(test_config, input_df, SPLIT_RATIO)
+    data_spliter = DataSplitter(test_config, input_df, SPLIT_RATIO)
     df_train_result, df_test_result = data_spliter.split()
 
     expected_train_shape = (493, 43)

@@ -16,6 +16,7 @@ from .utils import add_metadata, pickle_serialize, pickle_deserialize
 
 app = FastAPI()
 
+
 @app.post("/validate")
 async def validate(request: Request):
     data = await request.json()

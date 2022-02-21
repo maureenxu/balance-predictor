@@ -21,31 +21,39 @@ active_model = None
 
 
 def get_latest_model():
-    ROOT_DIR = dirname(abspath(__file__)) # This is your Project Root
-    MODELS_FOLDER = f'{ROOT_DIR}/../models'
-    model_filepaths = [f for f in listdir(MODELS_FOLDER) if isfile(join(MODELS_FOLDER, f))]
+    ROOT_DIR = dirname(abspath(__file__))  # This is your Project Root
+    MODELS_FOLDER = f"{ROOT_DIR}/../models"
+    model_filepaths = [
+        f for f in listdir(MODELS_FOLDER) if isfile(join(MODELS_FOLDER, f))
+    ]
 
     if len(model_filepaths) == 0:
         return None
 
     if len(model_filepaths) == 1:
-        with open(f'{MODELS_FOLDER}/{model_filepaths[0]}', 'r', encoding='utf-8') as model_file:
+        with open(
+            f"{MODELS_FOLDER}/{model_filepaths[0]}", "r", encoding="utf-8"
+        ) as model_file:
             model_pipeline = json.loads(model_file.read())
 
-        return pickle_deserialize(model_pipeline['model_data']['out']['model'])
-    
+        return pickle_deserialize(model_pipeline["model_data"]["out"]["model"])
+
     models = []
     for model_filepath in model_filepaths:
-        with open(f'{MODELS_FOLDER}/{model_filepath}', 'r', encoding='utf-8') as model_file:
+        with open(
+            f"{MODELS_FOLDER}/{model_filepath}", "r", encoding="utf-8"
+        ) as model_file:
             model_pipeline = json.loads(model_file.read())
-            model_pipeline['model_data']['datetime'] = datetime.strptime(model_pipeline['model_data']['datetime'], "%Y-%m-%dT%H:%M:%S%z")
+            model_pipeline["model_data"]["datetime"] = datetime.strptime(
+                model_pipeline["model_data"]["datetime"], "%Y-%m-%dT%H:%M:%S%z"
+            )
             models.append(model_pipeline)
 
-    latest_model = sorted(lambda x: x['datetime'], models)[0]
-    return pickle_deserialize(latest_model['model_data']['out']['model'])
+    latest_model = sorted(lambda x: x["datetime"], models)[0]
+    return pickle_deserialize(latest_model["model_data"]["out"]["model"])
 
 
-@app.on_event('startup')
+@app.on_event("startup")
 async def startup_event():
     global active_model
     active_model = get_latest_model()
@@ -57,15 +65,16 @@ async def score(request: Request):
 
     balance_history = data["balance_history"]
     model_pipeline = None
-    if 'model' in data:
+    if "model" in data:
         serialized_model = data["model"]
         model_pipeline = pickle_deserialize(serialized_model)
     else:
         model_pipeline = active_model
 
     if model_pipeline is None:
-        raise HTTPException(status_code=400, detail="Model is not passed, nor is there an active model.")
-
+        raise HTTPException(
+            status_code=400, detail="Model is not passed, nor is there an active model."
+        )
 
     scorer = Scorer(Config, balance_history, model_pipeline)
     feature_array = scorer.prepare_feature_array()
@@ -78,7 +87,7 @@ async def score(request: Request):
 @app.post("/submit")
 async def submit_model(request: Request):
     """
-        Demo purposes only:
+    Demo purposes only:
     """
     global active_model
 
@@ -91,4 +100,3 @@ async def submit_model(request: Request):
 
     active_model = model_pipeline
     return Response(status_code=200)
-

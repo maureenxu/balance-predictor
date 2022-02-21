@@ -13,7 +13,6 @@ from .utils import add_metadata
 app = FastAPI()
 
 
-
 @app.post("/split")
 async def split(request: Request):
     data = await request.json()

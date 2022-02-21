@@ -20,7 +20,6 @@ from .utils import add_metadata, pickle_serialize
 app = FastAPI()
 
 
-
 class JSONModelResponse(JSONResponse):
     media_type = "application/json"
 
@@ -37,7 +36,6 @@ class JSONModelResponse(JSONResponse):
             separators=(",", ":"),
             default=self._default_dumps,
         ).encode("utf-8")
-
 
 
 @app.post("/train")

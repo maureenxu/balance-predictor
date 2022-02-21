@@ -13,8 +13,8 @@ class ModelValidator:
         self.model_pipeline = model_pipeline
         self.config = config
 
-        self.X_test = self.df.drop([self.config.TARGET], axis=1)
-        self.y_test = self.df.loc[:, self.config.TARGET]
+        self.X_test = self.df.drop([self.config.TARGET], axis=1).values
+        self.y_test = self.df.loc[:, self.config.TARGET].values
         self.y_pred = self.model_pipeline.predict(self.X_test)
 
     def get_metrics(self):
@@ -30,3 +30,21 @@ class ModelValidator:
         plt.show()
 
         return plt
+
+
+# if __name__=="__main__":
+#     import json
+#     import pickle
+#     from configuration import Config
+#
+#     input_path = "../data/testing_data.pickle"
+#     with open(input_path, "rb") as input_file:
+#         data = pickle.load(input_file)
+#
+#     with open("../data/model_pipeline.pickle", "rb") as file:
+#         model_pipeline = pickle.load(file)
+#
+#     validator = ModelValidator(Config, data, model_pipeline)
+#
+#     metrics_dict = validator.get_metrics()
+#     plt = validator.plot_hist_vs_pred()

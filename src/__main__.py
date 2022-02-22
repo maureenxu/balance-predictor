@@ -7,6 +7,7 @@ from train import ModelTrainer
 from validate import ModelValidator
 from score import Scorer
 
+
 def main():
     # read in data for building the model
     input_path = "../data/train_input.json"
@@ -18,7 +19,8 @@ def main():
     data = preprocessor.preprocess()
 
     # split train test
-    df_train, df_test = DataSplitter.split(Config, data)
+    splitter = DataSplitter(Config, data)
+    df_train, df_test = splitter.split(split_ratio=0.8)
 
     # train a model
     trainer = ModelTrainer(Config, df_train)
@@ -30,7 +32,6 @@ def main():
     print(f"the metrics are: \n {metrics_dict}")
 
     plt = validator.plot_hist_vs_pred()
-    plt.show()
 
     # score a prediction
     input_path = "../data/score_input.json"
@@ -41,7 +42,8 @@ def main():
     feature_array = scorer.prepare_feature_array()
 
     score = scorer.get_prediction(feature_array)
-    print(score)
+    print(f"the prediction for the end balance for the given period is: {score[0]}")
+
 
 if __name__ == "__main__":
     main()

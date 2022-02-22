@@ -13,6 +13,8 @@ COPY ./setup.py /code/setup.py
 
 COPY ./src /code/src
 COPY ./pipeline /code/pipeline
+COPY ./secrets /code/secrets
+COPY ./models /code/models
 
 RUN pip install /code
 

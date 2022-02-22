@@ -12,24 +12,9 @@ from fastapi.responses import JSONResponse
 from src.validate import ModelValidator
 from src.configuration import Config
 
+from .utils import add_metadata, pickle_serialize, pickle_deserialize
+
 app = FastAPI()
-__version__ = importlib.metadata.version("MLOps-BalancePredictor-demo")
-
-
-def add_metadata(content: dict):
-    return {
-        "out": content,
-        "datetime": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
-        "version": __version__,
-    }
-
-
-def pickle_deserialize(serialized_obj: str) -> Pipeline:
-    return pickle.loads(base64.b64decode(serialized_obj.encode("utf-8")))
-
-
-def pickle_serialize(obj: object):
-    return base64.b64encode(pickle.dumps(obj)).decode("utf-8")
 
 
 @app.post("/validate")

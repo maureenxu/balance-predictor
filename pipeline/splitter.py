@@ -8,16 +8,9 @@ from fastapi.responses import JSONResponse
 from src.split import DataSplitter
 from src.configuration import Config
 
+from .utils import add_metadata
+
 app = FastAPI()
-__version__ = importlib.metadata.version("MLOps-BalancePredictor-demo")
-
-
-def add_metadata(content: dict):
-    return {
-        "out": content,
-        "datetime": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
-        "version": __version__,
-    }
 
 
 @app.post("/split")

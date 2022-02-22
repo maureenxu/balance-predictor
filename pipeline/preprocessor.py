@@ -1,23 +1,12 @@
-from datetime import datetime
-import importlib.metadata
-
 from fastapi import Request, FastAPI
 from fastapi.responses import JSONResponse
 
 from src import preprocess
 from src.configuration import Config
 
+from .utils import add_metadata
 
 app = FastAPI()
-__version__ = importlib.metadata.version("MLOps-BalancePredictor-demo")
-
-
-def add_metadata(content: dict):
-    return {
-        "out": content,
-        "datetime": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S%z"),
-        "version": __version__,
-    }
 
 
 @app.post("/preprocess")

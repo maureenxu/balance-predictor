@@ -27,11 +27,12 @@ def main():
     model_pipeline = trainer.train_model()
 
     # validate performance
-    validator = ModelValidator(Config, data, model_pipeline)
+    validator = ModelValidator(Config, df_test, model_pipeline)
     metrics_dict = validator.get_metrics()
     print(f"the metrics are: \n {metrics_dict}")
 
     plt = validator.plot_hist_vs_pred()
+    plt.show()
 
     # score a prediction
     input_path = "../data/score_input.json"

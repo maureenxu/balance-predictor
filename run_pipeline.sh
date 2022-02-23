@@ -1,4 +1,5 @@
-if [ "$#" -ne 4 ]; then
+min_nof_args=5
+if [ $# -ne $min_nof_args ]; then
     echo "Illegal number of arguments";
     exit 1
 fi
@@ -7,33 +8,9 @@ PREPROCESSOR_SERVICE=$1
 SPLITTER_SERVICE=$2
 TRAINER_SERVICE=$3
 VALIDATOR_SERVICE=$4
+save_model=$5
 
 echo "Service URL's: $PREPROCESSOR_SERVICE, $SPLITTER_SERVICE, $TRAINER_SERVICE, $VALIDATOR_SERVICE"
-
-show_help () {
-    echo
-    echo "Help: "
-    echo "      -h : Show this help screen"
-    echo "      -s : Save the trained model"
-    echo
-}
-
-# A POSIX variable
-OPTIND=1         # Reset in case getopts has been used previously in the shell.
-
-# Initialize our own variables:
-save_model=0
-
-while getopts "h?s" opt; do
-  case "$opt" in
-    h|\?)
-      show_help
-      exit 0
-      ;;
-    s)  save_model=1
-      ;;
-  esac
-done
 
 shift $((OPTIND-1))
 

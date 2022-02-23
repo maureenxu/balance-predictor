@@ -1,11 +1,3 @@
-show_help () {
-    echo
-    echo "Help: "
-    echo "      -h : Show this help screen"
-    echo "      -s : Save the trained model"
-    echo
-}
-
 min_nof_args=5
 if [ $# -ne $min_nof_args ]; then
     echo "Illegal number of arguments";

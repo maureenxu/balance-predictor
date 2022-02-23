@@ -1,3 +1,10 @@
+show_help () {
+    echo
+    echo "Help: "
+    echo "      -h : Show this help screen"
+    echo "      -s : Save the trained model"
+    echo
+}
 
 # A POSIX variable
 OPTIND=1         # Reset in case getopts has been used previously in the shell.

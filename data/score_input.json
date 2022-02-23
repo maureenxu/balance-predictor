@@ -1,0 +1,4367 @@
+[
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209185334801472",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "583.48",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "20.07"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209170344188685",
+    "category": {
+      "ID": 8023
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "603.55",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "38.15"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209144448338106",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "641.70",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "62.43"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209140334968625",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "704.13",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.98"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209132443773223",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "710.11",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209121151547709",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "716.11",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "47.32"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209103331051035",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "763.43",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "104.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209090002401841",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "867.43",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "1.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201209021516136636",
+    "category": {
+      "ID": 8006
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "869.42",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "33.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201208161012289541",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "903.41",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "8.48"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201208112859301259",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "911.89",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "54.53"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201208111013949437",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "966.42",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "8.63"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201208105217801541",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "975.05",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.97"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201208104851041199",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "989.02",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "11.75"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201208084122028524",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1000.77",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "27.11"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020120808015989197",
+    "category": {
+      "ID": 8023
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1027.88",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "99.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201208071132879908",
+    "category": {
+      "ID": 8021
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1126.88",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "51.58"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201208021537682256",
+    "category": {
+      "ID": 8021
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1178.46",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.95"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020120721005447389",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1183.41",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4500.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020120720484675408",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "5683.41",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "50.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020120720455702653",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "5633.41",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207150055384593",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "5640.91",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.59"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207145340718739",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "5654.50",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "27.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207144955993409",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "5682.00",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "11.98"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207144713216743",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "5693.98",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "19.91"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207143429022551",
+    "category": {
+      "ID": 8033
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "5713.89",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5689.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207102145063559",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "24.39",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "9.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207101610840408",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "34.09",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "45.39"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207094408456189",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "79.48",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "14.45"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207072139583642",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "93.93",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "8.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207063848254608",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "102.92",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "15.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201207023942175174",
+    "category": {
+      "ID": 8021
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "117.92",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "21.27"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201206212915235638",
+    "category": {
+      "ID": 8023
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "139.19",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201206173806914182",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "144.18",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "1.85"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201206173706676548",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "146.03",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "18.75"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201206122646791777",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "164.78",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.90"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201206104624685855",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "170.68",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "56.97"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201206090637483455",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "227.65",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.36"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201205152854243534",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "231.01",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "8.54"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201205144336461677",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "239.55",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.25"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201205114512656215",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "243.80",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "65.59"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201205114314881269",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "309.39",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.79"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201205113632750717",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "315.18",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "10.20"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201204160807053335",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "325.38",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "82.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020120415180332991",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "407.88",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "30.22"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201204144421917425",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "438.10",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.15"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201204003430920924",
+    "category": {
+      "ID": 8042
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "441.25",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201203215249588808",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "454.75",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "255.25"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201203163911794312",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "710.00",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "82.27"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020120313355555641",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "792.27",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201203130509709653",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "798.97",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "121.48"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201203112841266266",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "920.45",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "22.31"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201203065618722865",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "942.76",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.38"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201203065435147549",
+    "category": {
+      "ID": 8021
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "947.14",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "223.19"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201203065204650262",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1170.33",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "9.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202215408430603",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1180.32",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "49.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202203835084071",
+    "category": {
+      "ID": 8009
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1229.32",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "8.90"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202202221921186",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1238.22",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "11.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202201506758528",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "1249.72",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "1000.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202154201561994",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "249.72",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "45.34"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202151604377377",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "295.06",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202081413158108",
+    "category": {
+      "ID": 8036
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "298.05",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "180.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202081324233323",
+    "category": {
+      "ID": 8036
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "478.05",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "300.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202080519365663",
+    "category": {
+      "ID": 8021
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "778.05",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "542.85"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202072527587787",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1320.90",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "180.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202071540172543",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1500.90",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2.95"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202063813284705",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1503.85",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "42.75"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202030846234929",
+    "category": {
+      "ID": 8037
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1546.60",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201202030846234667",
+    "category": {
+      "ID": 8037
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1551.60",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "0.75"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020120116280715044",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1552.35",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "120.03"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201155332895979",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "1672.38",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "47.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201145845660301",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1625.38",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201145825685789",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "1633.08",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201145823225985",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1625.38",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201143532157048",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1633.08",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "33.09"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201125502221818",
+    "category": {
+      "ID": 8022
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1666.17",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "35.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020120110392529053",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1701.17",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "202012011020357196",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1706.17",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "44.90"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201101614952971",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1751.07",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "750.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201101334323252",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "2501.07",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "900.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201101300823501",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "1601.07",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2000.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201100632821056",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "398.93",
+      "creditDebitIndicator": "D"
+    },
+    "bookingAmount": "36.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201095709506836",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "362.43",
+      "creditDebitIndicator": "D"
+    },
+    "bookingAmount": "15.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201095411607922",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "347.43",
+      "creditDebitIndicator": "D"
+    },
+    "bookingAmount": "47.54"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201094905384347",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "299.89",
+      "creditDebitIndicator": "D"
+    },
+    "bookingAmount": "10.40"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201090928362652",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "289.49",
+      "creditDebitIndicator": "D"
+    },
+    "bookingAmount": "14.10"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201090503352266",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "275.39",
+      "creditDebitIndicator": "D"
+    },
+    "bookingAmount": "6.73"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201074021203539",
+    "category": {
+      "ID": 8030
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "268.66",
+      "creditDebitIndicator": "D"
+    },
+    "bookingAmount": "870.17"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201074021203082",
+    "category": {
+      "ID": 8030
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "601.51",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "345.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201074021202634",
+    "category": {
+      "ID": 8030
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "946.51",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "175.13"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201074021202171",
+    "category": {
+      "ID": 8030
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1121.64",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "118.75"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201074021201148",
+    "category": {
+      "ID": 8030
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1240.39",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "28.74"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201023823579506",
+    "category": {
+      "ID": 8030
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1269.13",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "377.31"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201201022056994362",
+    "category": {
+      "ID": 8042
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1646.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "75.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130150319774518",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1721.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.30"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130145742360489",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1726.74",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "22.44"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130142528460358",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1749.18",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.47"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130142222965044",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1756.65",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020113013405055602",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1760.64",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.25"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130132905676622",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1767.89",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "56.21"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130104254213697",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1824.10",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "31.29"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130103157378262",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1855.39",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "30.94"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130102014820434",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1886.33",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "15.69"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130075615520869",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1902.02",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201130005824912352",
+    "category": {
+      "ID": 8001
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1908.02",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "1.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129161504831944",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1909.72",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "83.98"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129160723684761",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1993.70",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.84"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129155828950037",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1999.54",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "21.31"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129154917018816",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2020.85",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129154820484256",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2028.84",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "29.98"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129153754238763",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2058.82",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "10.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129135353782807",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2069.81",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129115106239317",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2076.51",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "99.71"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129114917986504",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2176.22",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.79"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201129104743433516",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2182.01",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "110.80"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128163446055936",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "2292.81",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "58.30"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128153803479872",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2234.51",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "26.95"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128121253542196",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2261.46",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "200.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020112811520084935",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2461.46",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2.45"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128114219944808",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2463.91",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "24.74"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128112040039908",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2488.65",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "94.95"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128104350226704",
+    "category": {
+      "ID": 8024
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "2583.60",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "1035.95"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128103431343311",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1547.65",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "93.25"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128095850825252",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1640.90",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "9.55"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201128095024744265",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1650.45",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "73.66"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020112809353489579",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1724.11",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127105300837288",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1731.11",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127102242427277",
+    "category": {
+      "ID": 8034
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1733.81",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "326.88"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127102231714894",
+    "category": {
+      "ID": 8034
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2060.69",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "605.19"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127101803610062",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2665.88",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127101507738451",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2668.88",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "15.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127100507650162",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2683.88",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "9.90"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127100011753817",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2693.78",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "194.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127094635182264",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2888.48",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "97.24"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020112709054391726",
+    "category": {
+      "ID": 8031
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2985.72",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "110.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127080802636789",
+    "category": {
+      "ID": 8031
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3095.72",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "57.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127071233297521",
+    "category": {
+      "ID": 8022
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3152.72",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "136.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127070948860451",
+    "category": {
+      "ID": 8031
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3288.72",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "187.54"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127023332439185",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3476.26",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201127011326425862",
+    "category": {
+      "ID": 8042
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3482.26",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126110449093772",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3495.76",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "89.09"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126103305371564",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3584.85",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "59.91"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126073148758108",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3644.76",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "21.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126072502699371",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3665.76",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126070751656251",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3668.76",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "11.33"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126065133748104",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3680.09",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "55.48"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126023100529307",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3735.57",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126022917092592",
+    "category": {
+      "ID": 8021
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3740.57",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126021559427182",
+    "category": {
+      "ID": 8029
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3744.56",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "88.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201126021556179837",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3832.56",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020112520152454404",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3838.56",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "20.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125180034666327",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3858.56",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "45.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125143633108557",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3903.56",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "19.57"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125141820738488",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3923.13",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "235.13"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125140228247996",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4158.26",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "36.47"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125134427587818",
+    "category": {
+      "ID": 8023
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4194.73",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.79"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125131500406465",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4200.52",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "49.94"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125084543375678",
+    "category": {
+      "ID": 8013
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4250.46",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125083048002975",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4264.45",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125083029729363",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4267.45",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "14.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125081343140873",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4282.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125072117890973",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4288.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125071624447261",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4294.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "42.75"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125071609453045",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4337.19",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125071421604736",
+    "category": {
+      "ID": 8013
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4342.19",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "40.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125065959282495",
+    "category": {
+      "ID": 8013
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4382.69",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "89.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125065846027185",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4471.69",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125063911811321",
+    "category": {
+      "ID": 8013
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4478.69",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "48.97"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125024510086461",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4527.66",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201125024421272142",
+    "category": {
+      "ID": 8012
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4532.66",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201124213236980612",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4535.16",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "29.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201124132657812386",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4564.66",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.45"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201124130634077888",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4569.11",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.98"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201124130401575764",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4583.09",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "64.89"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020112410303187145",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4647.98",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "129.37"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201124085459675283",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4777.35",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "60.69"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201124081558383744",
+    "category": {
+      "ID": 8022
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "4838.04",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "404.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201124064333261377",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "5242.04",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "190.85"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201124002752046127",
+    "category": {
+      "ID": 8024
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "5432.89",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4707.57"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123153736224152",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "725.32",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "51.12"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123144355129633",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "776.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123144158610381",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "782.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "25.90"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123142802698776",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "808.34",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "17.90"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123141042950395",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "826.24",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "72.94"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020112313295178895",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "899.18",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "538.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123132526155668",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "361.18",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "5.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123132258075873",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "366.68",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "538.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123113620618792",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "904.68",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "117.03"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123112302740625",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1021.71",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "16.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123112241828061",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1037.71",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "12.05"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123073050152411",
+    "category": {
+      "ID": 8021
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1049.76",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "222.01"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123063753991112",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1271.77",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "10.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201123021805344928",
+    "category": {
+      "ID": 8021
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1281.77",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "339.55"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201122161850935056",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1621.32",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "54.01"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201122161238701581",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1675.33",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "26.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201122143048116899",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1701.33",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "25.80"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201122120611218557",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "1727.13",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "37.01"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201122105759903915",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1690.12",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "26.18"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201121144459627789",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "1716.30",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "500.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201121140257774456",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1216.30",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "20.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201121135605671337",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1236.80",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "10.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201121134030366737",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1246.80",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201121133945720419",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1259.80",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201121131615611587",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1266.80",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "498.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201120181444110066",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1764.80",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "21.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201120165920291233",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1786.30",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "31.55"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201120123757256301",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1817.85",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "11.35"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201120073450379072",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1829.20",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "388.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201120004107298901",
+    "category": {
+      "ID": 8001
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "2217.20",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "104.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201120003917982924",
+    "category": {
+      "ID": 8042
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2113.20",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201119125942206712",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2126.70",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "12.75"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201119100539664066",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2139.45",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "11.66"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201119080211857139",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2151.11",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "93.33"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020111814292332175",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2244.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "24.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201118124341434081",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2269.43",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "24.47"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201118123037171769",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2293.90",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "11.77"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201118122010853639",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2305.67",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "14.39"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201118021539157508",
+    "category": {
+      "ID": 8006
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2320.06",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "42.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201117182722092152",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2363.05",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "22.76"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201117141909525465",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2385.81",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.25"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020111712334055616",
+    "category": {
+      "ID": 8007
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "2389.06",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "19.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201117082538358307",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2369.07",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "17.95"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201117080023189151",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2387.02",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "172.64"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116141633479423",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2559.66",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "56.59"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116111316773774",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2616.25",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2.60"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116111011112155",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2618.85",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "28.92"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116103045571738",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2647.77",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2.45"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116102125801383",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2650.22",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "40.15"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116083111699433",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2690.37",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "100.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116080550878253",
+    "category": {
+      "ID": 8031
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "2790.37",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "522.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116070322390177",
+    "category": {
+      "ID": 8013
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2268.37",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "21.54"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201116003008885605",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2289.91",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "250.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201115142006639357",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2539.91",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "61.03"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201115140721303109",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2600.94",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "17.77"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201115120643239353",
+    "category": {
+      "ID": 8009
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2618.71",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "16.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201115120244135975",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2635.21",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "40.56"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201115112857599038",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2675.77",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "97.40"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201114172032275707",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2773.17",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "39.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201114165035593007",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2812.17",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "31.20"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201114122854339107",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2843.37",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "11.98"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201114122709459658",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2855.35",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.33"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201114121711650689",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2868.68",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "28.10"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113231036529765",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "2896.78",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "664.92"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020111317540194818",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2231.86",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.89"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113151935131258",
+    "category": {
+      "ID": 8006
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2238.75",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "413.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113145204450573",
+    "category": {
+      "ID": 8036
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2651.75",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "200.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113142013506872",
+    "category": {
+      "ID": 8001
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2851.75",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "1.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113114206784147",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2853.45",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "112.46"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113105453890188",
+    "category": {
+      "ID": 8041
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2965.91",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "8.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113105056349532",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2974.41",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "22.21"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113102750657896",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "2996.62",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.39"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020111300444028425",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3001.01",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "100.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020111300444028376",
+    "category": {
+      "ID": 8042
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3101.01",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "13.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201113004440283113",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3114.51",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "66.67"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201112212655680089",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3181.18",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "31.99"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201112172815699333",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3213.17",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "36.65"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201112172815699034",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3249.82",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.64"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201112162142838646",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3253.46",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "22.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201112100849891732",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3275.46",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.97"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201112095209079384",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3280.43",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.15"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201112065134017384",
+    "category": {
+      "ID": 8013
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3283.58",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201111150907946864",
+    "category": {
+      "ID": 8023
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3286.58",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "113.07"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201111135744414821",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "3399.65",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "19.60"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020111113485781117",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3380.05",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "42.39"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201111133746667933",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3422.44",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.25"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201111071411885844",
+    "category": {
+      "ID": 8003
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3425.69",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "26.13"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201111005553009141",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3451.82",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "125.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201110160423820153",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3576.82",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "105.87"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201110110027192098",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3682.69",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.98"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201110105057622539",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3687.67",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "0.30"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201110105013579769",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3687.97",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "61.62"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201110103337440698",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3749.59",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "17.80"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109152734712074",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3767.39",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.43"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109140621811475",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3774.82",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "19.89"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109120001682668",
+    "category": {
+      "ID": 8039
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3794.71",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "2.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109115423408574",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3797.21",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "22.15"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109114416194707",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3819.36",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4.70"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020110911352046672",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3824.06",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "0.39"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109110815740617",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3824.45",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "3.18"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109110548271145",
+    "category": {
+      "ID": 8040
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3827.63",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "8.97"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109103003930326",
+    "category": {
+      "ID": 8038
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3836.60",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "7.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109102953780917",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3844.10",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "16.30"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109093308327112",
+    "category": {
+      "ID": 8008
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3860.40",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "19.60"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "202011090903471448",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "3880.00",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "46000.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109084532805202",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "49880.00",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "4000.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201109084138188459",
+    "category": {
+      "ID": 8000
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "53880.00",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "52961.18"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201108142908940649",
+    "category": {
+      "ID": 8005
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "918.82",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "6.50"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201108140423100615",
+    "category": {
+      "ID": 8036
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "925.32",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "280.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201108140326300541",
+    "category": {
+      "ID": 8036
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1205.32",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "300.00"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "2020110814022742487",
+    "category": {
+      "ID": 8004
+    },
+    "creditDebitIndicator": "D",
+    "balanceAfterBooking": {
+      "value": "1505.32",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "100.76"
+  },
+  {
+    "accountIdentification": {
+      "iban": "xxxxxxx"
+    },
+    "bookingDateTimeGMT": "20201108100358437737",
+    "category": {
+      "ID": 8002
+    },
+    "creditDebitIndicator": "C",
+    "balanceAfterBooking": {
+      "value": "1606.08",
+      "creditDebitIndicator": "C"
+    },
+    "bookingAmount": "250.00"
+  }
+]

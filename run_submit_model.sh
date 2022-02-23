@@ -1,4 +1,5 @@
-SERVER_ADDRESS=localhost:8004
+# SERVER_ADDRESS=localhost:8004
+SERVER_ADDRESS=score.api.thereisawebsiteforeverything.com
 
 MODEL_NAME=$1
 MODEL=$(cat models/$MODEL_NAME.json | jq .model_data.out.model)
@@ -8,5 +9,3 @@ if [ $? == 1 ]; then
     echo 'Submission failed'
     exit 1
 fi
-
-echo 'Success'

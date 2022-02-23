@@ -1,11 +1,11 @@
 import json
 
-from configuration import Config
-from preprocess import DataPreprocessor
-from split import DataSplitter
-from train import ModelTrainer
-from validate import ModelValidator
-from score import Scorer
+from src.configuration import Config
+from src.preprocess import DataPreprocessor
+from src.split import DataSplitter
+from src.train import ModelTrainer
+from src.validate import ModelValidator
+from src.score import Scorer
 
 
 def main():

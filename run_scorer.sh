@@ -1,5 +1,5 @@
-# SERVER_ADDRESS=score.api.thereisawebsiteforeverything.com
-SERVER_ADDRESS=localhost:8004
+SERVER_ADDRESS=score.api.thereisawebsiteforeverything.com
+# SERVER_ADDRESS=localhost:8004
 
 DATA_FILEPATH=$1
 MODEL_NAME=$2

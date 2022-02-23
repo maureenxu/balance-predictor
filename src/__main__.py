@@ -7,7 +7,7 @@ from src.train import ModelTrainer
 from src.validate import ModelValidator
 from src.score import Scorer
 
-
+# pylint: disable=too-many-locals
 def main():
     # read in data for building the model
     input_path = "../data/train_input.json"

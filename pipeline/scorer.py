@@ -53,10 +53,10 @@ def get_latest_model():
     return pickle_deserialize(latest_model["model_data"]["out"]["model"])
 
 
-@app.on_event("startup")
-async def startup_event():
-    global active_model
-    active_model = get_latest_model()
+# @app.on_event("startup")
+# async def startup_event():
+#     global active_model
+#     active_model = get_latest_model()
 
 
 @app.post("/score")

@@ -25,4 +25,8 @@ while getopts "h?s" opt; do
   esac
 done
 
+shift $((OPTIND-1))
+
+[ "${1:-}" = "--" ] && shift
+
 ./run_pipeline.sh preprocess.$SERVER_ADDRESS split.$SERVER_ADDRESS train.$SERVER_ADDRESS validate.$SERVER_ADDRESS $save_model

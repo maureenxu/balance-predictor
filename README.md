@@ -1,5 +1,5 @@
 # balance-predictor
-This is a project for demonstrating MLOps. It will showcase how a balance predictor can be built and operated in production.
+This is a project for demonstrating MLOps, openning up the black box to showcase how in theory it could work. But this is NOT a production-ready project for performing MLOps. It will use a simple balance predictor as an example.
 
 The pipeline for building the predictor is shown in Figure 1. There is a [source code script](./src) for every step, written in Python classes.
 There are [tests](./tests) written to ensure every function performs as expected.
@@ -32,9 +32,10 @@ To run the pipeline, use the `run_pipeline.sh` command, it will perform the full
 Use `run_scorer.sh` for scoring a predictions. 
 It requires two arguments: 
 1) input data (i.e. a new transaction history) 
-2) model (optional) If null, the script will pick up ?? for scoring.
+2) model (optional) If null, the script will pick up the activate one for scoring.
 
 # External Dependencies
+The scipy library requires some external packages to be installed. We use the one below for our environments. 
 ```bash
 
 # OpenSUSE

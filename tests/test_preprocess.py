@@ -9,7 +9,7 @@ def test_initialisation(test_config, input_data):
     data_preprocessor = DataPreprocessor(test_config, input_data)
     result = data_preprocessor.df.shape
 
-    expected = (7166, 8)
+    expected = (6875, 8)
 
     assert result == expected
 
@@ -20,7 +20,7 @@ def test_preprocess(test_config, input_data):
 
     result = df.shape
 
-    expected = (686, 43)
+    expected = (654, 43)
 
     # persist the file for further tests
     # joblib.dump(value=df,

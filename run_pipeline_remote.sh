@@ -1,4 +1,4 @@
-SERVER_ADDRESS=api.thereisawebsiteforeverything.com
+SERVER_ADDRESS=api.some.remote.server.com
 
 show_help () {
     echo

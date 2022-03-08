@@ -20,45 +20,6 @@ app = FastAPI()
 active_model = None
 
 
-def get_latest_model():
-    ROOT_DIR = dirname(abspath(__file__))  # This is your Project Root
-    MODELS_FOLDER = f"{ROOT_DIR}/../models"
-    model_filepaths = [
-        f for f in listdir(MODELS_FOLDER) if isfile(join(MODELS_FOLDER, f))
-    ]
-
-    if len(model_filepaths) == 0:
-        return None
-
-    if len(model_filepaths) == 1:
-        with open(
-            f"{MODELS_FOLDER}/{model_filepaths[0]}", "r", encoding="utf-8"
-        ) as model_file:
-            model_pipeline = json.loads(model_file.read())
-
-        return pickle_deserialize(model_pipeline["model_data"]["out"]["model"])
-
-    models = []
-    for model_filepath in model_filepaths:
-        with open(
-            f"{MODELS_FOLDER}/{model_filepath}", "r", encoding="utf-8"
-        ) as model_file:
-            model_pipeline = json.loads(model_file.read())
-            model_pipeline["model_data"]["datetime"] = datetime.strptime(
-                model_pipeline["model_data"]["datetime"], "%Y-%m-%dT%H:%M:%S%z"
-            )
-            models.append(model_pipeline)
-
-    latest_model = sorted(lambda x: x["datetime"], models)[0]
-    return pickle_deserialize(latest_model["model_data"]["out"]["model"])
-
-
-@app.on_event("startup")
-async def startup_event():
-    global active_model
-    active_model = get_latest_model()
-
-
 @app.post("/score")
 async def score(request: Request):
     data = await request.json()

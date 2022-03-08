@@ -22,7 +22,7 @@ def test_config():
 
 @pytest.fixture
 def input_data(test_config):
-    with open(f"{test_config.RESOURCES_FOLDER}/input.json", encoding="utf8") as j:
+    with open(f"{test_config.RESOURCES_FOLDER}/train_input.json", encoding="utf8") as j:
         return json.load(j)
 
 

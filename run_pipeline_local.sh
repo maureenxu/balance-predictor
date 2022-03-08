@@ -23,4 +23,8 @@ while getopts "h?s" opt; do
   esac
 done
 
+shift $((OPTIND-1))
+
+[ "${1:-}" = "--" ] && shift
+
 ./run_pipeline.sh localhost:8000 localhost:8001 localhost:8002 localhost:8003 $save_model
